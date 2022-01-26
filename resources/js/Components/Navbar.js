@@ -1,7 +1,8 @@
 import { Link } from "@inertiajs/inertia-react";
-import { RiMovie2Fill, RiUserFill, RiMenuFill } from "react-icons/ri";
+import { RiMovie2Fill, RiUserFill } from "react-icons/ri";
 import { IconContext } from "react-icons";
 import NavButton from "./NavButton";
+import DropdownBurger from "./DropdownBurger";
 
 const Navbar = () => {
     return (
@@ -23,13 +24,7 @@ const Navbar = () => {
 
                 <div>
                     <div className="flex items-center visible lg:invisible lg:w-[0px] lg:h-[0px]">
-                        <div className="flex items-center justify-center h-[48px] w-[48px] bg-white bg-opacity-60 rounded-lg border-2 border-white border-opacity-30 hover:bg-opacity-70">
-                            <IconContext.Provider
-                                value={{ color: "white", size: "30px" }}
-                            >
-                                <RiMenuFill />
-                            </IconContext.Provider>
-                        </div>
+                        <DropdownBurger />
                     </div>
                     <div className="flex items-center invisible w-[0px] h-[0px] lg:visible lg:w-fit lg:h-fit">
                         <div>

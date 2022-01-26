@@ -97,6 +97,681 @@ function _createForOfIteratorHelperLoose(o, allowArrayLike) {
 
 /***/ }),
 
+/***/ "./node_modules/@headlessui/react/dist/components/keyboard.esm.js":
+/*!************************************************************************!*\
+  !*** ./node_modules/@headlessui/react/dist/components/keyboard.esm.js ***!
+  \************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Keys": () => (/* binding */ Keys)
+/* harmony export */ });
+// TODO: This must already exist somewhere, right? 🤔
+// Ref: https://www.w3.org/TR/uievents-key/#named-key-attribute-values
+var Keys;
+
+(function (Keys) {
+  Keys["Space"] = " ";
+  Keys["Enter"] = "Enter";
+  Keys["Escape"] = "Escape";
+  Keys["Backspace"] = "Backspace";
+  Keys["ArrowLeft"] = "ArrowLeft";
+  Keys["ArrowUp"] = "ArrowUp";
+  Keys["ArrowRight"] = "ArrowRight";
+  Keys["ArrowDown"] = "ArrowDown";
+  Keys["Home"] = "Home";
+  Keys["End"] = "End";
+  Keys["PageUp"] = "PageUp";
+  Keys["PageDown"] = "PageDown";
+  Keys["Tab"] = "Tab";
+})(Keys || (Keys = {}));
+
+
+//# sourceMappingURL=keyboard.esm.js.map
+
+
+/***/ }),
+
+/***/ "./node_modules/@headlessui/react/dist/components/menu/menu.esm.js":
+/*!*************************************************************************!*\
+  !*** ./node_modules/@headlessui/react/dist/components/menu/menu.esm.js ***!
+  \*************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Menu": () => (/* binding */ Menu)
+/* harmony export */ });
+/* harmony import */ var _virtual_rollupPluginBabelHelpers_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../_virtual/_rollupPluginBabelHelpers.js */ "./node_modules/@headlessui/react/dist/_virtual/_rollupPluginBabelHelpers.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _utils_match_esm_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../utils/match.esm.js */ "./node_modules/@headlessui/react/dist/utils/match.esm.js");
+/* harmony import */ var _utils_render_esm_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../utils/render.esm.js */ "./node_modules/@headlessui/react/dist/utils/render.esm.js");
+/* harmony import */ var _hooks_use_sync_refs_esm_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../hooks/use-sync-refs.esm.js */ "./node_modules/@headlessui/react/dist/hooks/use-sync-refs.esm.js");
+/* harmony import */ var _keyboard_esm_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../keyboard.esm.js */ "./node_modules/@headlessui/react/dist/components/keyboard.esm.js");
+/* harmony import */ var _utils_bugs_esm_js__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../utils/bugs.esm.js */ "./node_modules/@headlessui/react/dist/utils/bugs.esm.js");
+/* harmony import */ var _hooks_use_iso_morphic_effect_esm_js__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../../hooks/use-iso-morphic-effect.esm.js */ "./node_modules/@headlessui/react/dist/hooks/use-iso-morphic-effect.esm.js");
+/* harmony import */ var _hooks_use_id_esm_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../hooks/use-id.esm.js */ "./node_modules/@headlessui/react/dist/hooks/use-id.esm.js");
+/* harmony import */ var _utils_focus_management_esm_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../utils/focus-management.esm.js */ "./node_modules/@headlessui/react/dist/utils/focus-management.esm.js");
+/* harmony import */ var _hooks_use_window_event_esm_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../hooks/use-window-event.esm.js */ "./node_modules/@headlessui/react/dist/hooks/use-window-event.esm.js");
+/* harmony import */ var _internal_open_closed_esm_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../internal/open-closed.esm.js */ "./node_modules/@headlessui/react/dist/internal/open-closed.esm.js");
+/* harmony import */ var _hooks_use_resolve_button_type_esm_js__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../../hooks/use-resolve-button-type.esm.js */ "./node_modules/@headlessui/react/dist/hooks/use-resolve-button-type.esm.js");
+/* harmony import */ var _utils_disposables_esm_js__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../../utils/disposables.esm.js */ "./node_modules/@headlessui/react/dist/utils/disposables.esm.js");
+/* harmony import */ var _hooks_use_disposables_esm_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../hooks/use-disposables.esm.js */ "./node_modules/@headlessui/react/dist/hooks/use-disposables.esm.js");
+/* harmony import */ var _utils_calculate_active_index_esm_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../utils/calculate-active-index.esm.js */ "./node_modules/@headlessui/react/dist/utils/calculate-active-index.esm.js");
+/* harmony import */ var _hooks_use_tree_walker_esm_js__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../../hooks/use-tree-walker.esm.js */ "./node_modules/@headlessui/react/dist/hooks/use-tree-walker.esm.js");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var _reducers;
+var MenuStates;
+
+(function (MenuStates) {
+  MenuStates[MenuStates["Open"] = 0] = "Open";
+  MenuStates[MenuStates["Closed"] = 1] = "Closed";
+})(MenuStates || (MenuStates = {}));
+
+var ActionTypes;
+
+(function (ActionTypes) {
+  ActionTypes[ActionTypes["OpenMenu"] = 0] = "OpenMenu";
+  ActionTypes[ActionTypes["CloseMenu"] = 1] = "CloseMenu";
+  ActionTypes[ActionTypes["GoToItem"] = 2] = "GoToItem";
+  ActionTypes[ActionTypes["Search"] = 3] = "Search";
+  ActionTypes[ActionTypes["ClearSearch"] = 4] = "ClearSearch";
+  ActionTypes[ActionTypes["RegisterItem"] = 5] = "RegisterItem";
+  ActionTypes[ActionTypes["UnregisterItem"] = 6] = "UnregisterItem";
+})(ActionTypes || (ActionTypes = {}));
+
+var reducers = (_reducers = {}, _reducers[ActionTypes.CloseMenu] = function (state) {
+  if (state.menuState === MenuStates.Closed) return state;
+  return (0,_virtual_rollupPluginBabelHelpers_js__WEBPACK_IMPORTED_MODULE_1__["extends"])({}, state, {
+    activeItemIndex: null,
+    menuState: MenuStates.Closed
+  });
+}, _reducers[ActionTypes.OpenMenu] = function (state) {
+  if (state.menuState === MenuStates.Open) return state;
+  return (0,_virtual_rollupPluginBabelHelpers_js__WEBPACK_IMPORTED_MODULE_1__["extends"])({}, state, {
+    menuState: MenuStates.Open
+  });
+}, _reducers[ActionTypes.GoToItem] = function (state, action) {
+  var activeItemIndex = (0,_utils_calculate_active_index_esm_js__WEBPACK_IMPORTED_MODULE_2__.calculateActiveIndex)(action, {
+    resolveItems: function resolveItems() {
+      return state.items;
+    },
+    resolveActiveIndex: function resolveActiveIndex() {
+      return state.activeItemIndex;
+    },
+    resolveId: function resolveId(item) {
+      return item.id;
+    },
+    resolveDisabled: function resolveDisabled(item) {
+      return item.dataRef.current.disabled;
+    }
+  });
+  if (state.searchQuery === '' && state.activeItemIndex === activeItemIndex) return state;
+  return (0,_virtual_rollupPluginBabelHelpers_js__WEBPACK_IMPORTED_MODULE_1__["extends"])({}, state, {
+    searchQuery: '',
+    activeItemIndex: activeItemIndex
+  });
+}, _reducers[ActionTypes.Search] = function (state, action) {
+  var searchQuery = state.searchQuery + action.value.toLowerCase();
+  var match = state.items.findIndex(function (item) {
+    var _item$dataRef$current;
+
+    return ((_item$dataRef$current = item.dataRef.current.textValue) == null ? void 0 : _item$dataRef$current.startsWith(searchQuery)) && !item.dataRef.current.disabled;
+  });
+  if (match === -1 || match === state.activeItemIndex) return (0,_virtual_rollupPluginBabelHelpers_js__WEBPACK_IMPORTED_MODULE_1__["extends"])({}, state, {
+    searchQuery: searchQuery
+  });
+  return (0,_virtual_rollupPluginBabelHelpers_js__WEBPACK_IMPORTED_MODULE_1__["extends"])({}, state, {
+    searchQuery: searchQuery,
+    activeItemIndex: match
+  });
+}, _reducers[ActionTypes.ClearSearch] = function (state) {
+  if (state.searchQuery === '') return state;
+  return (0,_virtual_rollupPluginBabelHelpers_js__WEBPACK_IMPORTED_MODULE_1__["extends"])({}, state, {
+    searchQuery: ''
+  });
+}, _reducers[ActionTypes.RegisterItem] = function (state, action) {
+  return (0,_virtual_rollupPluginBabelHelpers_js__WEBPACK_IMPORTED_MODULE_1__["extends"])({}, state, {
+    items: [].concat(state.items, [{
+      id: action.id,
+      dataRef: action.dataRef
+    }])
+  });
+}, _reducers[ActionTypes.UnregisterItem] = function (state, action) {
+  var nextItems = state.items.slice();
+  var currentActiveItem = state.activeItemIndex !== null ? nextItems[state.activeItemIndex] : null;
+  var idx = nextItems.findIndex(function (a) {
+    return a.id === action.id;
+  });
+  if (idx !== -1) nextItems.splice(idx, 1);
+  return (0,_virtual_rollupPluginBabelHelpers_js__WEBPACK_IMPORTED_MODULE_1__["extends"])({}, state, {
+    items: nextItems,
+    activeItemIndex: function () {
+      if (idx === state.activeItemIndex) return null;
+      if (currentActiveItem === null) return null; // If we removed the item before the actual active index, then it would be out of sync. To
+      // fix this, we will find the correct (new) index position.
+
+      return nextItems.indexOf(currentActiveItem);
+    }()
+  });
+}, _reducers);
+var MenuContext = /*#__PURE__*/(0,react__WEBPACK_IMPORTED_MODULE_0__.createContext)(null);
+MenuContext.displayName = 'MenuContext';
+
+function useMenuContext(component) {
+  var context = (0,react__WEBPACK_IMPORTED_MODULE_0__.useContext)(MenuContext);
+
+  if (context === null) {
+    var err = new Error("<" + component + " /> is missing a parent <" + Menu.name + " /> component.");
+    if (Error.captureStackTrace) Error.captureStackTrace(err, useMenuContext);
+    throw err;
+  }
+
+  return context;
+}
+
+function stateReducer(state, action) {
+  return (0,_utils_match_esm_js__WEBPACK_IMPORTED_MODULE_3__.match)(action.type, reducers, state, action);
+} // ---
+
+
+var DEFAULT_MENU_TAG = react__WEBPACK_IMPORTED_MODULE_0__.Fragment;
+function Menu(props) {
+  var _match;
+
+  var reducerBag = (0,react__WEBPACK_IMPORTED_MODULE_0__.useReducer)(stateReducer, {
+    menuState: MenuStates.Closed,
+    buttonRef: (0,react__WEBPACK_IMPORTED_MODULE_0__.createRef)(),
+    itemsRef: (0,react__WEBPACK_IMPORTED_MODULE_0__.createRef)(),
+    items: [],
+    searchQuery: '',
+    activeItemIndex: null
+  });
+  var _reducerBag$ = reducerBag[0],
+      menuState = _reducerBag$.menuState,
+      itemsRef = _reducerBag$.itemsRef,
+      buttonRef = _reducerBag$.buttonRef,
+      dispatch = reducerBag[1]; // Handle outside click
+
+  (0,_hooks_use_window_event_esm_js__WEBPACK_IMPORTED_MODULE_4__.useWindowEvent)('mousedown', function (event) {
+    var _buttonRef$current, _itemsRef$current;
+
+    var target = event.target;
+    if (menuState !== MenuStates.Open) return;
+    if ((_buttonRef$current = buttonRef.current) == null ? void 0 : _buttonRef$current.contains(target)) return;
+    if ((_itemsRef$current = itemsRef.current) == null ? void 0 : _itemsRef$current.contains(target)) return;
+    dispatch({
+      type: ActionTypes.CloseMenu
+    });
+
+    if (!(0,_utils_focus_management_esm_js__WEBPACK_IMPORTED_MODULE_5__.isFocusableElement)(target, _utils_focus_management_esm_js__WEBPACK_IMPORTED_MODULE_5__.FocusableMode.Loose)) {
+      var _buttonRef$current2;
+
+      event.preventDefault();
+      (_buttonRef$current2 = buttonRef.current) == null ? void 0 : _buttonRef$current2.focus();
+    }
+  });
+  var slot = (0,react__WEBPACK_IMPORTED_MODULE_0__.useMemo)(function () {
+    return {
+      open: menuState === MenuStates.Open
+    };
+  }, [menuState]);
+  return react__WEBPACK_IMPORTED_MODULE_0__.createElement(MenuContext.Provider, {
+    value: reducerBag
+  }, react__WEBPACK_IMPORTED_MODULE_0__.createElement(_internal_open_closed_esm_js__WEBPACK_IMPORTED_MODULE_6__.OpenClosedProvider, {
+    value: (0,_utils_match_esm_js__WEBPACK_IMPORTED_MODULE_3__.match)(menuState, (_match = {}, _match[MenuStates.Open] = _internal_open_closed_esm_js__WEBPACK_IMPORTED_MODULE_6__.State.Open, _match[MenuStates.Closed] = _internal_open_closed_esm_js__WEBPACK_IMPORTED_MODULE_6__.State.Closed, _match))
+  }, (0,_utils_render_esm_js__WEBPACK_IMPORTED_MODULE_7__.render)({
+    props: props,
+    slot: slot,
+    defaultTag: DEFAULT_MENU_TAG,
+    name: 'Menu'
+  })));
+} // ---
+
+var DEFAULT_BUTTON_TAG = 'button';
+var Button = /*#__PURE__*/(0,_utils_render_esm_js__WEBPACK_IMPORTED_MODULE_7__.forwardRefWithAs)(function Button(props, ref) {
+  var _state$itemsRef$curre;
+
+  var _useMenuContext = useMenuContext([Menu.name, Button.name].join('.')),
+      state = _useMenuContext[0],
+      dispatch = _useMenuContext[1];
+
+  var buttonRef = (0,_hooks_use_sync_refs_esm_js__WEBPACK_IMPORTED_MODULE_8__.useSyncRefs)(state.buttonRef, ref);
+  var id = "headlessui-menu-button-" + (0,_hooks_use_id_esm_js__WEBPACK_IMPORTED_MODULE_9__.useId)();
+  var d = (0,_hooks_use_disposables_esm_js__WEBPACK_IMPORTED_MODULE_10__.useDisposables)();
+  var handleKeyDown = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(function (event) {
+    switch (event.key) {
+      // Ref: https://www.w3.org/TR/wai-aria-practices-1.2/#keyboard-interaction-13
+      case _keyboard_esm_js__WEBPACK_IMPORTED_MODULE_11__.Keys.Space:
+      case _keyboard_esm_js__WEBPACK_IMPORTED_MODULE_11__.Keys.Enter:
+      case _keyboard_esm_js__WEBPACK_IMPORTED_MODULE_11__.Keys.ArrowDown:
+        event.preventDefault();
+        event.stopPropagation();
+        dispatch({
+          type: ActionTypes.OpenMenu
+        });
+        d.nextFrame(function () {
+          return dispatch({
+            type: ActionTypes.GoToItem,
+            focus: _utils_calculate_active_index_esm_js__WEBPACK_IMPORTED_MODULE_2__.Focus.First
+          });
+        });
+        break;
+
+      case _keyboard_esm_js__WEBPACK_IMPORTED_MODULE_11__.Keys.ArrowUp:
+        event.preventDefault();
+        event.stopPropagation();
+        dispatch({
+          type: ActionTypes.OpenMenu
+        });
+        d.nextFrame(function () {
+          return dispatch({
+            type: ActionTypes.GoToItem,
+            focus: _utils_calculate_active_index_esm_js__WEBPACK_IMPORTED_MODULE_2__.Focus.Last
+          });
+        });
+        break;
+    }
+  }, [dispatch, d]);
+  var handleKeyUp = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(function (event) {
+    switch (event.key) {
+      case _keyboard_esm_js__WEBPACK_IMPORTED_MODULE_11__.Keys.Space:
+        // Required for firefox, event.preventDefault() in handleKeyDown for
+        // the Space key doesn't cancel the handleKeyUp, which in turn
+        // triggers a *click*.
+        event.preventDefault();
+        break;
+    }
+  }, []);
+  var handleClick = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(function (event) {
+    if ((0,_utils_bugs_esm_js__WEBPACK_IMPORTED_MODULE_12__.isDisabledReactIssue7711)(event.currentTarget)) return event.preventDefault();
+    if (props.disabled) return;
+
+    if (state.menuState === MenuStates.Open) {
+      dispatch({
+        type: ActionTypes.CloseMenu
+      });
+      d.nextFrame(function () {
+        var _state$buttonRef$curr;
+
+        return (_state$buttonRef$curr = state.buttonRef.current) == null ? void 0 : _state$buttonRef$curr.focus({
+          preventScroll: true
+        });
+      });
+    } else {
+      event.preventDefault();
+      event.stopPropagation();
+      dispatch({
+        type: ActionTypes.OpenMenu
+      });
+    }
+  }, [dispatch, d, state, props.disabled]);
+  var slot = (0,react__WEBPACK_IMPORTED_MODULE_0__.useMemo)(function () {
+    return {
+      open: state.menuState === MenuStates.Open
+    };
+  }, [state]);
+  var passthroughProps = props;
+  var propsWeControl = {
+    ref: buttonRef,
+    id: id,
+    type: (0,_hooks_use_resolve_button_type_esm_js__WEBPACK_IMPORTED_MODULE_13__.useResolveButtonType)(props, state.buttonRef),
+    'aria-haspopup': true,
+    'aria-controls': (_state$itemsRef$curre = state.itemsRef.current) == null ? void 0 : _state$itemsRef$curre.id,
+    'aria-expanded': props.disabled ? undefined : state.menuState === MenuStates.Open,
+    onKeyDown: handleKeyDown,
+    onKeyUp: handleKeyUp,
+    onClick: handleClick
+  };
+  return (0,_utils_render_esm_js__WEBPACK_IMPORTED_MODULE_7__.render)({
+    props: (0,_virtual_rollupPluginBabelHelpers_js__WEBPACK_IMPORTED_MODULE_1__["extends"])({}, passthroughProps, propsWeControl),
+    slot: slot,
+    defaultTag: DEFAULT_BUTTON_TAG,
+    name: 'Menu.Button'
+  });
+}); // ---
+
+var DEFAULT_ITEMS_TAG = 'div';
+var ItemsRenderFeatures = _utils_render_esm_js__WEBPACK_IMPORTED_MODULE_7__.Features.RenderStrategy | _utils_render_esm_js__WEBPACK_IMPORTED_MODULE_7__.Features.Static;
+var Items = /*#__PURE__*/(0,_utils_render_esm_js__WEBPACK_IMPORTED_MODULE_7__.forwardRefWithAs)(function Items(props, ref) {
+  var _state$items$state$ac, _state$buttonRef$curr4;
+
+  var _useMenuContext2 = useMenuContext([Menu.name, Items.name].join('.')),
+      state = _useMenuContext2[0],
+      dispatch = _useMenuContext2[1];
+
+  var itemsRef = (0,_hooks_use_sync_refs_esm_js__WEBPACK_IMPORTED_MODULE_8__.useSyncRefs)(state.itemsRef, ref);
+  var id = "headlessui-menu-items-" + (0,_hooks_use_id_esm_js__WEBPACK_IMPORTED_MODULE_9__.useId)();
+  var searchDisposables = (0,_hooks_use_disposables_esm_js__WEBPACK_IMPORTED_MODULE_10__.useDisposables)();
+  var usesOpenClosedState = (0,_internal_open_closed_esm_js__WEBPACK_IMPORTED_MODULE_6__.useOpenClosed)();
+
+  var visible = function () {
+    if (usesOpenClosedState !== null) {
+      return usesOpenClosedState === _internal_open_closed_esm_js__WEBPACK_IMPORTED_MODULE_6__.State.Open;
+    }
+
+    return state.menuState === MenuStates.Open;
+  }();
+
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+    var container = state.itemsRef.current;
+    if (!container) return;
+    if (state.menuState !== MenuStates.Open) return;
+    if (container === document.activeElement) return;
+    container.focus({
+      preventScroll: true
+    });
+  }, [state.menuState, state.itemsRef]);
+  (0,_hooks_use_tree_walker_esm_js__WEBPACK_IMPORTED_MODULE_14__.useTreeWalker)({
+    container: state.itemsRef.current,
+    enabled: state.menuState === MenuStates.Open,
+    accept: function accept(node) {
+      if (node.getAttribute('role') === 'menuitem') return NodeFilter.FILTER_REJECT;
+      if (node.hasAttribute('role')) return NodeFilter.FILTER_SKIP;
+      return NodeFilter.FILTER_ACCEPT;
+    },
+    walk: function walk(node) {
+      node.setAttribute('role', 'none');
+    }
+  });
+  var handleKeyDown = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(function (event) {
+    searchDisposables.dispose();
+
+    switch (event.key) {
+      // Ref: https://www.w3.org/TR/wai-aria-practices-1.2/#keyboard-interaction-12
+      // @ts-expect-error Fallthrough is expected here
+      case _keyboard_esm_js__WEBPACK_IMPORTED_MODULE_11__.Keys.Space:
+        if (state.searchQuery !== '') {
+          event.preventDefault();
+          event.stopPropagation();
+          return dispatch({
+            type: ActionTypes.Search,
+            value: event.key
+          });
+        }
+
+      // When in type ahead mode, fallthrough
+
+      case _keyboard_esm_js__WEBPACK_IMPORTED_MODULE_11__.Keys.Enter:
+        event.preventDefault();
+        event.stopPropagation();
+        dispatch({
+          type: ActionTypes.CloseMenu
+        });
+
+        if (state.activeItemIndex !== null) {
+          var _document$getElementB;
+
+          var _id = state.items[state.activeItemIndex].id;
+          (_document$getElementB = document.getElementById(_id)) == null ? void 0 : _document$getElementB.click();
+        }
+
+        (0,_utils_disposables_esm_js__WEBPACK_IMPORTED_MODULE_15__.disposables)().nextFrame(function () {
+          var _state$buttonRef$curr2;
+
+          return (_state$buttonRef$curr2 = state.buttonRef.current) == null ? void 0 : _state$buttonRef$curr2.focus({
+            preventScroll: true
+          });
+        });
+        break;
+
+      case _keyboard_esm_js__WEBPACK_IMPORTED_MODULE_11__.Keys.ArrowDown:
+        event.preventDefault();
+        event.stopPropagation();
+        return dispatch({
+          type: ActionTypes.GoToItem,
+          focus: _utils_calculate_active_index_esm_js__WEBPACK_IMPORTED_MODULE_2__.Focus.Next
+        });
+
+      case _keyboard_esm_js__WEBPACK_IMPORTED_MODULE_11__.Keys.ArrowUp:
+        event.preventDefault();
+        event.stopPropagation();
+        return dispatch({
+          type: ActionTypes.GoToItem,
+          focus: _utils_calculate_active_index_esm_js__WEBPACK_IMPORTED_MODULE_2__.Focus.Previous
+        });
+
+      case _keyboard_esm_js__WEBPACK_IMPORTED_MODULE_11__.Keys.Home:
+      case _keyboard_esm_js__WEBPACK_IMPORTED_MODULE_11__.Keys.PageUp:
+        event.preventDefault();
+        event.stopPropagation();
+        return dispatch({
+          type: ActionTypes.GoToItem,
+          focus: _utils_calculate_active_index_esm_js__WEBPACK_IMPORTED_MODULE_2__.Focus.First
+        });
+
+      case _keyboard_esm_js__WEBPACK_IMPORTED_MODULE_11__.Keys.End:
+      case _keyboard_esm_js__WEBPACK_IMPORTED_MODULE_11__.Keys.PageDown:
+        event.preventDefault();
+        event.stopPropagation();
+        return dispatch({
+          type: ActionTypes.GoToItem,
+          focus: _utils_calculate_active_index_esm_js__WEBPACK_IMPORTED_MODULE_2__.Focus.Last
+        });
+
+      case _keyboard_esm_js__WEBPACK_IMPORTED_MODULE_11__.Keys.Escape:
+        event.preventDefault();
+        event.stopPropagation();
+        dispatch({
+          type: ActionTypes.CloseMenu
+        });
+        (0,_utils_disposables_esm_js__WEBPACK_IMPORTED_MODULE_15__.disposables)().nextFrame(function () {
+          var _state$buttonRef$curr3;
+
+          return (_state$buttonRef$curr3 = state.buttonRef.current) == null ? void 0 : _state$buttonRef$curr3.focus({
+            preventScroll: true
+          });
+        });
+        break;
+
+      case _keyboard_esm_js__WEBPACK_IMPORTED_MODULE_11__.Keys.Tab:
+        event.preventDefault();
+        event.stopPropagation();
+        break;
+
+      default:
+        if (event.key.length === 1) {
+          dispatch({
+            type: ActionTypes.Search,
+            value: event.key
+          });
+          searchDisposables.setTimeout(function () {
+            return dispatch({
+              type: ActionTypes.ClearSearch
+            });
+          }, 350);
+        }
+
+        break;
+    }
+  }, [dispatch, searchDisposables, state]);
+  var handleKeyUp = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(function (event) {
+    switch (event.key) {
+      case _keyboard_esm_js__WEBPACK_IMPORTED_MODULE_11__.Keys.Space:
+        // Required for firefox, event.preventDefault() in handleKeyDown for
+        // the Space key doesn't cancel the handleKeyUp, which in turn
+        // triggers a *click*.
+        event.preventDefault();
+        break;
+    }
+  }, []);
+  var slot = (0,react__WEBPACK_IMPORTED_MODULE_0__.useMemo)(function () {
+    return {
+      open: state.menuState === MenuStates.Open
+    };
+  }, [state]);
+  var propsWeControl = {
+    'aria-activedescendant': state.activeItemIndex === null ? undefined : (_state$items$state$ac = state.items[state.activeItemIndex]) == null ? void 0 : _state$items$state$ac.id,
+    'aria-labelledby': (_state$buttonRef$curr4 = state.buttonRef.current) == null ? void 0 : _state$buttonRef$curr4.id,
+    id: id,
+    onKeyDown: handleKeyDown,
+    onKeyUp: handleKeyUp,
+    role: 'menu',
+    tabIndex: 0,
+    ref: itemsRef
+  };
+  var passthroughProps = props;
+  return (0,_utils_render_esm_js__WEBPACK_IMPORTED_MODULE_7__.render)({
+    props: (0,_virtual_rollupPluginBabelHelpers_js__WEBPACK_IMPORTED_MODULE_1__["extends"])({}, passthroughProps, propsWeControl),
+    slot: slot,
+    defaultTag: DEFAULT_ITEMS_TAG,
+    features: ItemsRenderFeatures,
+    visible: visible,
+    name: 'Menu.Items'
+  });
+}); // ---
+
+var DEFAULT_ITEM_TAG = react__WEBPACK_IMPORTED_MODULE_0__.Fragment;
+
+function Item(props) {
+  var _props$disabled = props.disabled,
+      disabled = _props$disabled === void 0 ? false : _props$disabled,
+      onClick = props.onClick,
+      passthroughProps = (0,_virtual_rollupPluginBabelHelpers_js__WEBPACK_IMPORTED_MODULE_1__.objectWithoutPropertiesLoose)(props, ["disabled", "onClick"]);
+
+  var _useMenuContext3 = useMenuContext([Menu.name, Item.name].join('.')),
+      state = _useMenuContext3[0],
+      dispatch = _useMenuContext3[1];
+
+  var id = "headlessui-menu-item-" + (0,_hooks_use_id_esm_js__WEBPACK_IMPORTED_MODULE_9__.useId)();
+  var active = state.activeItemIndex !== null ? state.items[state.activeItemIndex].id === id : false;
+  (0,_hooks_use_iso_morphic_effect_esm_js__WEBPACK_IMPORTED_MODULE_16__.useIsoMorphicEffect)(function () {
+    if (state.menuState !== MenuStates.Open) return;
+    if (!active) return;
+    var d = (0,_utils_disposables_esm_js__WEBPACK_IMPORTED_MODULE_15__.disposables)();
+    d.nextFrame(function () {
+      var _document$getElementB2;
+
+      return (_document$getElementB2 = document.getElementById(id)) == null ? void 0 : _document$getElementB2.scrollIntoView == null ? void 0 : _document$getElementB2.scrollIntoView({
+        block: 'nearest'
+      });
+    });
+    return d.dispose;
+  }, [id, active, state.menuState]);
+  var bag = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)({
+    disabled: disabled
+  });
+  (0,_hooks_use_iso_morphic_effect_esm_js__WEBPACK_IMPORTED_MODULE_16__.useIsoMorphicEffect)(function () {
+    bag.current.disabled = disabled;
+  }, [bag, disabled]);
+  (0,_hooks_use_iso_morphic_effect_esm_js__WEBPACK_IMPORTED_MODULE_16__.useIsoMorphicEffect)(function () {
+    var _document$getElementB3, _document$getElementB4;
+
+    bag.current.textValue = (_document$getElementB3 = document.getElementById(id)) == null ? void 0 : (_document$getElementB4 = _document$getElementB3.textContent) == null ? void 0 : _document$getElementB4.toLowerCase();
+  }, [bag, id]);
+  (0,_hooks_use_iso_morphic_effect_esm_js__WEBPACK_IMPORTED_MODULE_16__.useIsoMorphicEffect)(function () {
+    dispatch({
+      type: ActionTypes.RegisterItem,
+      id: id,
+      dataRef: bag
+    });
+    return function () {
+      return dispatch({
+        type: ActionTypes.UnregisterItem,
+        id: id
+      });
+    };
+  }, [bag, id]);
+  var handleClick = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(function (event) {
+    if (disabled) return event.preventDefault();
+    dispatch({
+      type: ActionTypes.CloseMenu
+    });
+    (0,_utils_disposables_esm_js__WEBPACK_IMPORTED_MODULE_15__.disposables)().nextFrame(function () {
+      var _state$buttonRef$curr5;
+
+      return (_state$buttonRef$curr5 = state.buttonRef.current) == null ? void 0 : _state$buttonRef$curr5.focus({
+        preventScroll: true
+      });
+    });
+    if (onClick) return onClick(event);
+  }, [dispatch, state.buttonRef, disabled, onClick]);
+  var handleFocus = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(function () {
+    if (disabled) return dispatch({
+      type: ActionTypes.GoToItem,
+      focus: _utils_calculate_active_index_esm_js__WEBPACK_IMPORTED_MODULE_2__.Focus.Nothing
+    });
+    dispatch({
+      type: ActionTypes.GoToItem,
+      focus: _utils_calculate_active_index_esm_js__WEBPACK_IMPORTED_MODULE_2__.Focus.Specific,
+      id: id
+    });
+  }, [disabled, id, dispatch]);
+  var handleMove = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(function () {
+    if (disabled) return;
+    if (active) return;
+    dispatch({
+      type: ActionTypes.GoToItem,
+      focus: _utils_calculate_active_index_esm_js__WEBPACK_IMPORTED_MODULE_2__.Focus.Specific,
+      id: id
+    });
+  }, [disabled, active, id, dispatch]);
+  var handleLeave = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(function () {
+    if (disabled) return;
+    if (!active) return;
+    dispatch({
+      type: ActionTypes.GoToItem,
+      focus: _utils_calculate_active_index_esm_js__WEBPACK_IMPORTED_MODULE_2__.Focus.Nothing
+    });
+  }, [disabled, active, dispatch]);
+  var slot = (0,react__WEBPACK_IMPORTED_MODULE_0__.useMemo)(function () {
+    return {
+      active: active,
+      disabled: disabled
+    };
+  }, [active, disabled]);
+  var propsWeControl = {
+    id: id,
+    role: 'menuitem',
+    tabIndex: disabled === true ? undefined : -1,
+    'aria-disabled': disabled === true ? true : undefined,
+    disabled: undefined,
+    onClick: handleClick,
+    onFocus: handleFocus,
+    onPointerMove: handleMove,
+    onMouseMove: handleMove,
+    onPointerLeave: handleLeave,
+    onMouseLeave: handleLeave
+  };
+  return (0,_utils_render_esm_js__WEBPACK_IMPORTED_MODULE_7__.render)({
+    props: (0,_virtual_rollupPluginBabelHelpers_js__WEBPACK_IMPORTED_MODULE_1__["extends"])({}, passthroughProps, propsWeControl),
+    slot: slot,
+    defaultTag: DEFAULT_ITEM_TAG,
+    name: 'Menu.Item'
+  });
+} // ---
+
+
+Menu.Button = Button;
+Menu.Items = Items;
+Menu.Item = Item;
+
+
+//# sourceMappingURL=menu.esm.js.map
+
+
+/***/ }),
+
 /***/ "./node_modules/@headlessui/react/dist/components/transitions/transition.esm.js":
 /*!**************************************************************************************!*\
   !*** ./node_modules/@headlessui/react/dist/components/transitions/transition.esm.js ***!
@@ -596,6 +1271,41 @@ function transition(node, base, from, to, entered, done) {
 
 /***/ }),
 
+/***/ "./node_modules/@headlessui/react/dist/hooks/use-disposables.esm.js":
+/*!**************************************************************************!*\
+  !*** ./node_modules/@headlessui/react/dist/hooks/use-disposables.esm.js ***!
+  \**************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "useDisposables": () => (/* binding */ useDisposables)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _utils_disposables_esm_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils/disposables.esm.js */ "./node_modules/@headlessui/react/dist/utils/disposables.esm.js");
+
+
+
+function useDisposables() {
+  // Using useState instead of useRef so that we can use the initializer function.
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(_utils_disposables_esm_js__WEBPACK_IMPORTED_MODULE_1__.disposables),
+      d = _useState[0];
+
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+    return function () {
+      return d.dispose();
+    };
+  }, [d]);
+  return d;
+}
+
+
+//# sourceMappingURL=use-disposables.esm.js.map
+
+
+/***/ }),
+
 /***/ "./node_modules/@headlessui/react/dist/hooks/use-id.esm.js":
 /*!*****************************************************************!*\
   !*** ./node_modules/@headlessui/react/dist/hooks/use-id.esm.js ***!
@@ -725,6 +1435,58 @@ var useIsoMorphicEffect = typeof window !== 'undefined' ? react__WEBPACK_IMPORTE
 
 /***/ }),
 
+/***/ "./node_modules/@headlessui/react/dist/hooks/use-resolve-button-type.esm.js":
+/*!**********************************************************************************!*\
+  !*** ./node_modules/@headlessui/react/dist/hooks/use-resolve-button-type.esm.js ***!
+  \**********************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "useResolveButtonType": () => (/* binding */ useResolveButtonType)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _use_iso_morphic_effect_esm_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./use-iso-morphic-effect.esm.js */ "./node_modules/@headlessui/react/dist/hooks/use-iso-morphic-effect.esm.js");
+
+
+
+function resolveType(props) {
+  var _props$as;
+
+  if (props.type) return props.type;
+  var tag = (_props$as = props.as) != null ? _props$as : 'button';
+  if (typeof tag === 'string' && tag.toLowerCase() === 'button') return 'button';
+  return undefined;
+}
+
+function useResolveButtonType(props, ref) {
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(function () {
+    return resolveType(props);
+  }),
+      type = _useState[0],
+      setType = _useState[1];
+
+  (0,_use_iso_morphic_effect_esm_js__WEBPACK_IMPORTED_MODULE_1__.useIsoMorphicEffect)(function () {
+    setType(resolveType(props));
+  }, [props.type, props.as]);
+  (0,_use_iso_morphic_effect_esm_js__WEBPACK_IMPORTED_MODULE_1__.useIsoMorphicEffect)(function () {
+    if (type) return;
+    if (!ref.current) return;
+
+    if (ref.current instanceof HTMLButtonElement && !ref.current.hasAttribute('type')) {
+      setType('button');
+    }
+  }, [type, ref]);
+  return type;
+}
+
+
+//# sourceMappingURL=use-resolve-button-type.esm.js.map
+
+
+/***/ }),
+
 /***/ "./node_modules/@headlessui/react/dist/hooks/use-server-handoff-complete.esm.js":
 /*!**************************************************************************************!*\
   !*** ./node_modules/@headlessui/react/dist/hooks/use-server-handoff-complete.esm.js ***!
@@ -759,6 +1521,133 @@ function useServerHandoffComplete() {
 
 
 //# sourceMappingURL=use-server-handoff-complete.esm.js.map
+
+
+/***/ }),
+
+/***/ "./node_modules/@headlessui/react/dist/hooks/use-sync-refs.esm.js":
+/*!************************************************************************!*\
+  !*** ./node_modules/@headlessui/react/dist/hooks/use-sync-refs.esm.js ***!
+  \************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "useSyncRefs": () => (/* binding */ useSyncRefs)
+/* harmony export */ });
+/* harmony import */ var _virtual_rollupPluginBabelHelpers_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../_virtual/_rollupPluginBabelHelpers.js */ "./node_modules/@headlessui/react/dist/_virtual/_rollupPluginBabelHelpers.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+
+
+function useSyncRefs() {
+  for (var _len = arguments.length, refs = new Array(_len), _key = 0; _key < _len; _key++) {
+    refs[_key] = arguments[_key];
+  }
+
+  var cache = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(refs);
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+    cache.current = refs;
+  }, [refs]);
+  return (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(function (value) {
+    for (var _iterator = (0,_virtual_rollupPluginBabelHelpers_js__WEBPACK_IMPORTED_MODULE_1__.createForOfIteratorHelperLoose)(cache.current), _step; !(_step = _iterator()).done;) {
+      var ref = _step.value;
+      if (ref == null) continue;
+      if (typeof ref === 'function') ref(value);else ref.current = value;
+    }
+  }, [cache]);
+}
+
+
+//# sourceMappingURL=use-sync-refs.esm.js.map
+
+
+/***/ }),
+
+/***/ "./node_modules/@headlessui/react/dist/hooks/use-tree-walker.esm.js":
+/*!**************************************************************************!*\
+  !*** ./node_modules/@headlessui/react/dist/hooks/use-tree-walker.esm.js ***!
+  \**************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "useTreeWalker": () => (/* binding */ useTreeWalker)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _use_iso_morphic_effect_esm_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./use-iso-morphic-effect.esm.js */ "./node_modules/@headlessui/react/dist/hooks/use-iso-morphic-effect.esm.js");
+
+
+
+function useTreeWalker(_ref) {
+  var container = _ref.container,
+      accept = _ref.accept,
+      walk = _ref.walk,
+      _ref$enabled = _ref.enabled,
+      enabled = _ref$enabled === void 0 ? true : _ref$enabled;
+  var acceptRef = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(accept);
+  var walkRef = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(walk);
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+    acceptRef.current = accept;
+    walkRef.current = walk;
+  }, [accept, walk]);
+  (0,_use_iso_morphic_effect_esm_js__WEBPACK_IMPORTED_MODULE_1__.useIsoMorphicEffect)(function () {
+    if (!container) return;
+    if (!enabled) return;
+    var accept = acceptRef.current;
+    var walk = walkRef.current;
+    var acceptNode = Object.assign(function (node) {
+      return accept(node);
+    }, {
+      acceptNode: accept
+    });
+    var walker = document.createTreeWalker(container, NodeFilter.SHOW_ELEMENT, acceptNode, false);
+
+    while (walker.nextNode()) {
+      walk(walker.currentNode);
+    }
+  }, [container, enabled, acceptRef, walkRef]);
+}
+
+
+//# sourceMappingURL=use-tree-walker.esm.js.map
+
+
+/***/ }),
+
+/***/ "./node_modules/@headlessui/react/dist/hooks/use-window-event.esm.js":
+/*!***************************************************************************!*\
+  !*** ./node_modules/@headlessui/react/dist/hooks/use-window-event.esm.js ***!
+  \***************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "useWindowEvent": () => (/* binding */ useWindowEvent)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+
+function useWindowEvent(type, listener, options) {
+  var listenerRef = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(listener);
+  listenerRef.current = listener;
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+    function handler(event) {
+      listenerRef.current.call(window, event);
+    }
+
+    window.addEventListener(type, handler, options);
+    return function () {
+      return window.removeEventListener(type, handler, options);
+    };
+  }, [type, options]);
+}
+
+
+//# sourceMappingURL=use-window-event.esm.js.map
 
 
 /***/ }),
@@ -801,6 +1690,153 @@ function OpenClosedProvider(_ref) {
 
 
 //# sourceMappingURL=open-closed.esm.js.map
+
+
+/***/ }),
+
+/***/ "./node_modules/@headlessui/react/dist/utils/bugs.esm.js":
+/*!***************************************************************!*\
+  !*** ./node_modules/@headlessui/react/dist/utils/bugs.esm.js ***!
+  \***************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "isDisabledReactIssue7711": () => (/* binding */ isDisabledReactIssue7711)
+/* harmony export */ });
+// See: https://github.com/facebook/react/issues/7711
+// See: https://github.com/facebook/react/pull/20612
+// See: https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#concept-fe-disabled (2.)
+function isDisabledReactIssue7711(element) {
+  var _ref, _parent;
+
+  var parent = element.parentElement;
+  var legend = null;
+
+  while (parent && !(parent instanceof HTMLFieldSetElement)) {
+    if (parent instanceof HTMLLegendElement) legend = parent;
+    parent = parent.parentElement;
+  }
+
+  var isParentDisabled = (_ref = ((_parent = parent) == null ? void 0 : _parent.getAttribute('disabled')) === '') != null ? _ref : false;
+  if (isParentDisabled && isFirstLegend(legend)) return false;
+  return isParentDisabled;
+}
+
+function isFirstLegend(element) {
+  if (!element) return false;
+  var previous = element.previousElementSibling;
+
+  while (previous !== null) {
+    if (previous instanceof HTMLLegendElement) return false;
+    previous = previous.previousElementSibling;
+  }
+
+  return true;
+}
+
+
+//# sourceMappingURL=bugs.esm.js.map
+
+
+/***/ }),
+
+/***/ "./node_modules/@headlessui/react/dist/utils/calculate-active-index.esm.js":
+/*!*********************************************************************************!*\
+  !*** ./node_modules/@headlessui/react/dist/utils/calculate-active-index.esm.js ***!
+  \*********************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Focus": () => (/* binding */ Focus),
+/* harmony export */   "calculateActiveIndex": () => (/* binding */ calculateActiveIndex)
+/* harmony export */ });
+function assertNever(x) {
+  throw new Error('Unexpected object: ' + x);
+}
+
+var Focus;
+
+(function (Focus) {
+  /** Focus the first non-disabled item. */
+  Focus[Focus["First"] = 0] = "First";
+  /** Focus the previous non-disabled item. */
+
+  Focus[Focus["Previous"] = 1] = "Previous";
+  /** Focus the next non-disabled item. */
+
+  Focus[Focus["Next"] = 2] = "Next";
+  /** Focus the last non-disabled item. */
+
+  Focus[Focus["Last"] = 3] = "Last";
+  /** Focus a specific item based on the `id` of the item. */
+
+  Focus[Focus["Specific"] = 4] = "Specific";
+  /** Focus no items at all. */
+
+  Focus[Focus["Nothing"] = 5] = "Nothing";
+})(Focus || (Focus = {}));
+
+function calculateActiveIndex(action, resolvers) {
+  var items = resolvers.resolveItems();
+  if (items.length <= 0) return null;
+  var currentActiveIndex = resolvers.resolveActiveIndex();
+  var activeIndex = currentActiveIndex != null ? currentActiveIndex : -1;
+
+  var nextActiveIndex = function () {
+    switch (action.focus) {
+      case Focus.First:
+        return items.findIndex(function (item) {
+          return !resolvers.resolveDisabled(item);
+        });
+
+      case Focus.Previous:
+        {
+          var idx = items.slice().reverse().findIndex(function (item, idx, all) {
+            if (activeIndex !== -1 && all.length - idx - 1 >= activeIndex) return false;
+            return !resolvers.resolveDisabled(item);
+          });
+          if (idx === -1) return idx;
+          return items.length - 1 - idx;
+        }
+
+      case Focus.Next:
+        return items.findIndex(function (item, idx) {
+          if (idx <= activeIndex) return false;
+          return !resolvers.resolveDisabled(item);
+        });
+
+      case Focus.Last:
+        {
+          var _idx = items.slice().reverse().findIndex(function (item) {
+            return !resolvers.resolveDisabled(item);
+          });
+
+          if (_idx === -1) return _idx;
+          return items.length - 1 - _idx;
+        }
+
+      case Focus.Specific:
+        return items.findIndex(function (item) {
+          return resolvers.resolveId(item) === action.id;
+        });
+
+      case Focus.Nothing:
+        return null;
+
+      default:
+        assertNever(action);
+    }
+  }();
+
+  return nextActiveIndex === -1 ? currentActiveIndex : nextActiveIndex;
+}
+
+
+//# sourceMappingURL=calculate-active-index.esm.js.map
 
 
 /***/ }),
@@ -878,6 +1914,192 @@ function disposables() {
 
 
 //# sourceMappingURL=disposables.esm.js.map
+
+
+/***/ }),
+
+/***/ "./node_modules/@headlessui/react/dist/utils/focus-management.esm.js":
+/*!***************************************************************************!*\
+  !*** ./node_modules/@headlessui/react/dist/utils/focus-management.esm.js ***!
+  \***************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Focus": () => (/* binding */ Focus),
+/* harmony export */   "FocusResult": () => (/* binding */ FocusResult),
+/* harmony export */   "FocusableMode": () => (/* binding */ FocusableMode),
+/* harmony export */   "focusElement": () => (/* binding */ focusElement),
+/* harmony export */   "focusIn": () => (/* binding */ focusIn),
+/* harmony export */   "getFocusableElements": () => (/* binding */ getFocusableElements),
+/* harmony export */   "isFocusableElement": () => (/* binding */ isFocusableElement)
+/* harmony export */ });
+/* harmony import */ var _match_esm_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./match.esm.js */ "./node_modules/@headlessui/react/dist/utils/match.esm.js");
+
+
+//  - https://stackoverflow.com/a/30753870
+
+var focusableSelector = /*#__PURE__*/['[contentEditable=true]', '[tabindex]', 'a[href]', 'area[href]', 'button:not([disabled])', 'iframe', 'input:not([disabled])', 'select:not([disabled])', 'textarea:not([disabled])'].map( false ? // TODO: Remove this once JSDOM fixes the issue where an element that is
+// "hidden" can be the document.activeElement, because this is not possible
+// in real browsers.
+// TODO: Remove this once JSDOM fixes the issue where an element that is
+0 : function (selector) {
+  return selector + ":not([tabindex='-1'])";
+}).join(',');
+var Focus;
+
+(function (Focus) {
+  /** Focus the first non-disabled element */
+  Focus[Focus["First"] = 1] = "First";
+  /** Focus the previous non-disabled element */
+
+  Focus[Focus["Previous"] = 2] = "Previous";
+  /** Focus the next non-disabled element */
+
+  Focus[Focus["Next"] = 4] = "Next";
+  /** Focus the last non-disabled element */
+
+  Focus[Focus["Last"] = 8] = "Last";
+  /** Wrap tab around */
+
+  Focus[Focus["WrapAround"] = 16] = "WrapAround";
+  /** Prevent scrolling the focusable elements into view */
+
+  Focus[Focus["NoScroll"] = 32] = "NoScroll";
+})(Focus || (Focus = {}));
+
+var FocusResult;
+
+(function (FocusResult) {
+  /** Something went wrong while trying to focus. */
+  FocusResult[FocusResult["Error"] = 0] = "Error";
+  /** When `Focus.WrapAround` is enabled, going from position `N` to `N+1` where `N` is the last index in the array, then we overflow. */
+
+  FocusResult[FocusResult["Overflow"] = 1] = "Overflow";
+  /** Focus was successful. */
+
+  FocusResult[FocusResult["Success"] = 2] = "Success";
+  /** When `Focus.WrapAround` is enabled, going from position `N` to `N-1` where `N` is the first index in the array, then we underflow. */
+
+  FocusResult[FocusResult["Underflow"] = 3] = "Underflow";
+})(FocusResult || (FocusResult = {}));
+
+var Direction;
+
+(function (Direction) {
+  Direction[Direction["Previous"] = -1] = "Previous";
+  Direction[Direction["Next"] = 1] = "Next";
+})(Direction || (Direction = {}));
+
+function getFocusableElements(container) {
+  if (container === void 0) {
+    container = document.body;
+  }
+
+  if (container == null) return [];
+  return Array.from(container.querySelectorAll(focusableSelector));
+}
+var FocusableMode;
+
+(function (FocusableMode) {
+  /** The element itself must be focusable. */
+  FocusableMode[FocusableMode["Strict"] = 0] = "Strict";
+  /** The element should be inside of a focusable element. */
+
+  FocusableMode[FocusableMode["Loose"] = 1] = "Loose";
+})(FocusableMode || (FocusableMode = {}));
+
+function isFocusableElement(element, mode) {
+  var _match;
+
+  if (mode === void 0) {
+    mode = FocusableMode.Strict;
+  }
+
+  if (element === document.body) return false;
+  return (0,_match_esm_js__WEBPACK_IMPORTED_MODULE_0__.match)(mode, (_match = {}, _match[FocusableMode.Strict] = function () {
+    return element.matches(focusableSelector);
+  }, _match[FocusableMode.Loose] = function () {
+    var next = element;
+
+    while (next !== null) {
+      if (next.matches(focusableSelector)) return true;
+      next = next.parentElement;
+    }
+
+    return false;
+  }, _match));
+}
+function focusElement(element) {
+  element == null ? void 0 : element.focus({
+    preventScroll: true
+  });
+}
+function focusIn(container, focus) {
+  var elements = Array.isArray(container) ? container.slice().sort(function (a, b) {
+    var position = a.compareDocumentPosition(b);
+    if (position & Node.DOCUMENT_POSITION_FOLLOWING) return -1;
+    if (position & Node.DOCUMENT_POSITION_PRECEDING) return 1;
+    return 0;
+  }) : getFocusableElements(container);
+  var active = document.activeElement;
+
+  var direction = function () {
+    if (focus & (Focus.First | Focus.Next)) return Direction.Next;
+    if (focus & (Focus.Previous | Focus.Last)) return Direction.Previous;
+    throw new Error('Missing Focus.First, Focus.Previous, Focus.Next or Focus.Last');
+  }();
+
+  var startIndex = function () {
+    if (focus & Focus.First) return 0;
+    if (focus & Focus.Previous) return Math.max(0, elements.indexOf(active)) - 1;
+    if (focus & Focus.Next) return Math.max(0, elements.indexOf(active)) + 1;
+    if (focus & Focus.Last) return elements.length - 1;
+    throw new Error('Missing Focus.First, Focus.Previous, Focus.Next or Focus.Last');
+  }();
+
+  var focusOptions = focus & Focus.NoScroll ? {
+    preventScroll: true
+  } : {};
+  var offset = 0;
+  var total = elements.length;
+  var next = undefined;
+
+  do {
+    var _next;
+
+    // Guard against infinite loops
+    if (offset >= total || offset + total <= 0) return FocusResult.Error;
+    var nextIdx = startIndex + offset;
+
+    if (focus & Focus.WrapAround) {
+      nextIdx = (nextIdx + total) % total;
+    } else {
+      if (nextIdx < 0) return FocusResult.Underflow;
+      if (nextIdx >= total) return FocusResult.Overflow;
+    }
+
+    next = elements[nextIdx]; // Try the focus the next element, might not work if it is "hidden" to the user.
+
+    (_next = next) == null ? void 0 : _next.focus(focusOptions); // Try the next one in line
+
+    offset += direction;
+  } while (next !== document.activeElement); // This is a little weird, but let me try and explain: There are a few scenario's
+  // in chrome for example where a focused `<a>` tag does not get the default focus
+  // styles and sometimes they do. This highly depends on whether you started by
+  // clicking or by using your keyboard. When you programmatically add focus `anchor.focus()`
+  // then the active element (document.activeElement) is this anchor, which is expected.
+  // However in that case the default focus styles are not applied *unless* you
+  // also add this tabindex.
+
+
+  if (!next.hasAttribute('tabindex')) next.setAttribute('tabindex', '0');
+  return FocusResult.Success;
+}
+
+
+//# sourceMappingURL=focus-management.esm.js.map
 
 
 /***/ }),
@@ -3503,6 +4725,81 @@ Dropdown.Link = DropdownLink;
 
 /***/ }),
 
+/***/ "./resources/js/Components/DropdownBurger.js":
+/*!***************************************************!*\
+  !*** ./resources/js/Components/DropdownBurger.js ***!
+  \***************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react_icons_ri__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-icons/ri */ "./node_modules/react-icons/ri/index.esm.js");
+/* harmony import */ var react_icons__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-icons */ "./node_modules/react-icons/lib/esm/index.js");
+/* harmony import */ var _headlessui_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @headlessui/react */ "./node_modules/@headlessui/react/dist/components/menu/menu.esm.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+
+
+
+var DropdownBurger = function DropdownBurger() {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+    className: "flex justify-items-end",
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_headlessui_react__WEBPACK_IMPORTED_MODULE_2__.Menu, {
+      as: "relative",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_headlessui_react__WEBPACK_IMPORTED_MODULE_2__.Menu.Button, {
+        className: "flex items-center justify-center h-[48px] w-[48px] bg-white bg-opacity-60 rounded-lg border-2 border-white border-opacity-30 hover:bg-opacity-70",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_icons__WEBPACK_IMPORTED_MODULE_0__.IconContext.Provider, {
+          value: {
+            color: "white",
+            size: "30px"
+          },
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_icons_ri__WEBPACK_IMPORTED_MODULE_3__.RiMenuFill, {})
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_headlessui_react__WEBPACK_IMPORTED_MODULE_2__.Menu.Items, {
+        className: "origin-top-right absolute right-0 mt-4 mr-5 px-2 w-fit shadow-lg bg-white bg-opacity-60 rounded-xl border-2 border-white border-opacity-30 bg-clip-padding backdrop-filter backdrop-blur-xl",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+          className: "py-1",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_headlessui_react__WEBPACK_IMPORTED_MODULE_2__.Menu.Item, {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+              className: "groip flex items-center px-4 py-3 text-xl font-semibold border-b-2 border-white border-opacity-30  text-white backdrop-filter-none backdrop-blur-none",
+              children: "HOME"
+            })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_headlessui_react__WEBPACK_IMPORTED_MODULE_2__.Menu.Item, {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+              className: "groip flex items-center px-4 py-3 text-xl font-semibold border-b-2 border-white border-opacity-30  text-white backdrop-filter-none backdrop-blur-none",
+              children: "CATEGORIES"
+            })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_headlessui_react__WEBPACK_IMPORTED_MODULE_2__.Menu.Item, {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+              className: "groip flex items-center px-4 py-3 text-xl font-semibold border-b-2 border-white border-opacity-30  text-white backdrop-filter-none backdrop-blur-none",
+              children: "SHELF"
+            })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_headlessui_react__WEBPACK_IMPORTED_MODULE_2__.Menu.Item, {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+              className: "groip flex items-center px-4 py-3 text-xl font-semibold border-b-2 border-white border-opacity-30  text-white backdrop-filter-none backdrop-blur-none",
+              children: "NOTES"
+            })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_headlessui_react__WEBPACK_IMPORTED_MODULE_2__.Menu.Item, {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+              className: "groip flex items-center px-4 py-3 text-xl font-semibold text-white",
+              children: "PROFILE"
+            })
+          })]
+        })
+      })]
+    })
+  });
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (DropdownBurger);
+
+/***/ }),
+
 /***/ "./resources/js/Components/Input.js":
 /*!******************************************!*\
   !*** ./resources/js/Components/Input.js ***!
@@ -3652,10 +4949,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
-/* harmony import */ var react_icons_ri__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-icons/ri */ "./node_modules/react-icons/ri/index.esm.js");
+/* harmony import */ var react_icons_ri__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-icons/ri */ "./node_modules/react-icons/ri/index.esm.js");
 /* harmony import */ var react_icons__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-icons */ "./node_modules/react-icons/lib/esm/index.js");
 /* harmony import */ var _NavButton__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./NavButton */ "./resources/js/Components/NavButton.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _DropdownBurger__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./DropdownBurger */ "./resources/js/Components/DropdownBurger.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
 
 
 
@@ -3664,56 +4963,47 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var Navbar = function Navbar() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
     className: "h-[60px] w-full mt-7",
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
       className: "flex items-center justify-between xl:mx-28 mx-5",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
         className: "flex items-center",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(react_icons_ri__WEBPACK_IMPORTED_MODULE_4__.RiMovie2Fill, {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_icons_ri__WEBPACK_IMPORTED_MODULE_5__.RiMovie2Fill, {
           className: "float-left h-[50px] w-[50px] text-white opacity-80"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("h1", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("h1", {
           className: "font-semibold text-[46px] text-white opacity-80 lg:visible invisible lg:w-fit lg:h-fit w-[0px] h-[0px]",
           children: "RTM"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("input", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("input", {
             type: "text",
             placeholder: "Search...",
             className: "mx-2 h-[48px] w-[214px] rounded-xl bg-clip-padding backdrop-filter backdrop-blur-xl bg-white bg-opacity-60 border-2 border-white border-opacity-70 lg:w-[290px] lg:mx-8"
           })
         })]
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
           className: "flex items-center visible lg:invisible lg:w-[0px] lg:h-[0px]",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-            className: "flex items-center justify-center h-[48px] w-[48px] bg-white bg-opacity-60 rounded-lg border-2 border-white border-opacity-30 hover:bg-opacity-70",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(react_icons__WEBPACK_IMPORTED_MODULE_1__.IconContext.Provider, {
-              value: {
-                color: "white",
-                size: "30px"
-              },
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(react_icons_ri__WEBPACK_IMPORTED_MODULE_4__.RiMenuFill, {})
-            })
-          })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_DropdownBurger__WEBPACK_IMPORTED_MODULE_3__["default"], {})
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
           className: "flex items-center invisible w-[0px] h-[0px] lg:visible lg:w-fit lg:h-fit",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_NavButton__WEBPACK_IMPORTED_MODULE_2__["default"], {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_NavButton__WEBPACK_IMPORTED_MODULE_2__["default"], {
               btnText: "HOME",
               btnStyle: "rounded-l-xl border-l-2 border-y-2"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_NavButton__WEBPACK_IMPORTED_MODULE_2__["default"], {
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_NavButton__WEBPACK_IMPORTED_MODULE_2__["default"], {
               btnText: "CATEGORIES",
               btnStyle: "border-y-2"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_NavButton__WEBPACK_IMPORTED_MODULE_2__["default"], {
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_NavButton__WEBPACK_IMPORTED_MODULE_2__["default"], {
               btnText: "SHELF",
               btnStyle: "border-y-2"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_NavButton__WEBPACK_IMPORTED_MODULE_2__["default"], {
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_NavButton__WEBPACK_IMPORTED_MODULE_2__["default"], {
               btnText: "NOTES",
               btnStyle: "rounded-r-xl border-r-2 border-y-2"
             })]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
             className: "flex items-center justify-center ml-6 bg-white bg-opacity-60 h-[48px] w-[48px] rounded-xl border-2 border-white border-opacity-30 cursor-pointer hover:bg-opacity-70",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(react_icons__WEBPACK_IMPORTED_MODULE_1__.IconContext.Provider, {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_icons__WEBPACK_IMPORTED_MODULE_1__.IconContext.Provider, {
               value: {
                 color: "rgba(255, 255, 255, 0.8)",
                 size: "30px",
@@ -3721,7 +5011,7 @@ var Navbar = function Navbar() {
                   verticalAlign: "middle"
                 }
               },
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(react_icons_ri__WEBPACK_IMPORTED_MODULE_4__.RiUserFill, {})
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_icons_ri__WEBPACK_IMPORTED_MODULE_5__.RiUserFill, {})
             })
           })]
         })]
@@ -4055,7 +5345,7 @@ function Layout(_ref) {
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
       className: "fixed h-screen w-screen bg-gradient-to-b from-[#BAABF4] to-[#417ED7]/[50]",
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_Components_Navbar__WEBPACK_IMPORTED_MODULE_1__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-        className: "mt-5 ml-28",
+        className: "mt-5 mx-5 lg:mt-5 lg:mx-28",
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("article", {
           children: children
         })
