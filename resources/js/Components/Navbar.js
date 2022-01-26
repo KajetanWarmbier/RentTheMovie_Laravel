@@ -22,7 +22,9 @@ const Navbar = () => {
                 </div>
 
                 <div className="flex items-center visible lg:invisible lg:w-[0px] lg:h-[0px]">
-                    <div className="h-[48px] w-[48px] bg-white bg-opacity-60 rounded-lg border-2 border-white border-opacity-30 hover:bg-opacity-70"></div>
+                    <div className="h-[48px] w-[48px] bg-white bg-opacity-60 rounded-lg border-2 border-white border-opacity-30 hover:bg-opacity-70">
+                        B
+                    </div>
                 </div>
 
                 <div className="flex items-center invisible w-[0px] h-[0px] lg:visible lg:w-fit lg:h-fit">
