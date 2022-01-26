@@ -2,7 +2,7 @@ const NavButton = (props) => {
     return (
         <>
             <button
-                className={`h-[48px] w-fit px-4 bg-white bg-opacity-60 bg-clip-padding backdrop-filter backdrop-blur-xl  ${props.btnStyle}`}
+                className={`h-[48px] w-fit px-4 bg-white bg-opacity-60 bg-clip-padding backdrop-filter backdrop-blur-xl border-white border-opacity-70 ${props.btnStyle} hover:bg-opacity-80`}
             >
                 {props.btnText}
             </button>
