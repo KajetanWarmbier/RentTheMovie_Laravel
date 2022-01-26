@@ -3,6 +3,7 @@ import { Link, Head } from "@inertiajs/inertia-react";
 import Layout from "@/Layouts/Layout";
 
 const Categories = (props) => {
+    console.log(props)
     return (
         <>
             <div>
