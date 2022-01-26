@@ -1,5 +1,5 @@
 import { Link } from "@inertiajs/inertia-react";
-import { RiMovie2Fill, RiUserFill } from "react-icons/ri";
+import { RiMovie2Fill, RiUserFill, RiMenuFill } from "react-icons/ri";
 import { IconContext } from "react-icons";
 import NavButton from "./NavButton";
 
@@ -21,35 +21,43 @@ const Navbar = () => {
                     </div>
                 </div>
 
-                <div className="flex items-center visible lg:invisible lg:w-[0px] lg:h-[0px]">
-                    <div className="h-[48px] w-[48px] bg-white bg-opacity-60 rounded-lg border-2 border-white border-opacity-30 hover:bg-opacity-70">
-                        B
+                <div>
+                    <div className="flex items-center visible lg:invisible lg:w-[0px] lg:h-[0px]">
+                        <div className="flex items-center justify-center h-[48px] w-[48px] bg-white bg-opacity-60 rounded-lg border-2 border-white border-opacity-30 hover:bg-opacity-70">
+                            <IconContext.Provider
+                                value={{ color: "white", size: "30px" }}
+                            >
+                                <RiMenuFill />
+                            </IconContext.Provider>
+                        </div>
                     </div>
-                </div>
-
-                <div className="flex items-center invisible w-[0px] h-[0px] lg:visible lg:w-fit lg:h-fit">
-                    <div>
-                        <NavButton
-                            btnText="HOME"
-                            btnStyle="rounded-l-xl border-l-2 border-y-2"
-                        />
-                        <NavButton btnText="CATEGORIES" btnStyle="border-y-2" />
-                        <NavButton btnText="SHELF" btnStyle="border-y-2" />
-                        <NavButton
-                            btnText="NOTES"
-                            btnStyle="rounded-r-xl border-r-2 border-y-2"
-                        />
-                    </div>
-                    <div className="flex items-center justify-center ml-6 bg-white bg-opacity-60 h-[48px] w-[48px] rounded-xl border-2 border-white border-opacity-30 cursor-pointer hover:bg-opacity-70">
-                        <IconContext.Provider
-                            value={{
-                                color: "rgba(255, 255, 255, 0.8)",
-                                size: "30px",
-                                style: { verticalAlign: "middle" },
-                            }}
-                        >
-                            <RiUserFill />
-                        </IconContext.Provider>
+                    <div className="flex items-center invisible w-[0px] h-[0px] lg:visible lg:w-fit lg:h-fit">
+                        <div>
+                            <NavButton
+                                btnText="HOME"
+                                btnStyle="rounded-l-xl border-l-2 border-y-2"
+                            />
+                            <NavButton
+                                btnText="CATEGORIES"
+                                btnStyle="border-y-2"
+                            />
+                            <NavButton btnText="SHELF" btnStyle="border-y-2" />
+                            <NavButton
+                                btnText="NOTES"
+                                btnStyle="rounded-r-xl border-r-2 border-y-2"
+                            />
+                        </div>
+                        <div className="flex items-center justify-center ml-6 bg-white bg-opacity-60 h-[48px] w-[48px] rounded-xl border-2 border-white border-opacity-30 cursor-pointer hover:bg-opacity-70">
+                            <IconContext.Provider
+                                value={{
+                                    color: "rgba(255, 255, 255, 0.8)",
+                                    size: "30px",
+                                    style: { verticalAlign: "middle" },
+                                }}
+                            >
+                                <RiUserFill />
+                            </IconContext.Provider>
+                        </div>
                     </div>
                 </div>
             </div>

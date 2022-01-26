@@ -3682,39 +3682,48 @@ var Navbar = function Navbar() {
             className: "mx-2 h-[48px] w-[214px] rounded-xl bg-clip-padding backdrop-filter backdrop-blur-xl bg-white bg-opacity-60 border-2 border-white border-opacity-70 lg:w-[290px] lg:mx-8"
           })
         })]
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-        className: "flex items-center visible lg:invisible lg:w-[0px] lg:h-[0px]",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-          className: "h-[48px] w-[48px] bg-white bg-opacity-60 rounded-lg border-2 border-white border-opacity-30 hover:bg-opacity-70"
-        })
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-        className: "flex items-center invisible w-[0px] h-[0px] lg:visible lg:w-fit lg:h-fit",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_NavButton__WEBPACK_IMPORTED_MODULE_2__["default"], {
-            btnText: "HOME",
-            btnStyle: "rounded-l-xl border-l-2 border-y-2"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_NavButton__WEBPACK_IMPORTED_MODULE_2__["default"], {
-            btnText: "CATEGORIES",
-            btnStyle: "border-y-2"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_NavButton__WEBPACK_IMPORTED_MODULE_2__["default"], {
-            btnText: "SHELF",
-            btnStyle: "border-y-2"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_NavButton__WEBPACK_IMPORTED_MODULE_2__["default"], {
-            btnText: "NOTES",
-            btnStyle: "rounded-r-xl border-r-2 border-y-2"
-          })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-          className: "flex items-center justify-center ml-6 bg-white bg-opacity-60 h-[48px] w-[48px] rounded-xl border-2 border-white border-opacity-30 cursor-pointer hover:bg-opacity-70",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(react_icons__WEBPACK_IMPORTED_MODULE_1__.IconContext.Provider, {
-            value: {
-              color: "rgba(255, 255, 255, 0.8)",
-              size: "30px",
-              style: {
-                verticalAlign: "middle"
-              }
-            },
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(react_icons_ri__WEBPACK_IMPORTED_MODULE_4__.RiUserFill, {})
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+          className: "flex items-center visible lg:invisible lg:w-[0px] lg:h-[0px]",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+            className: "flex items-center justify-center h-[48px] w-[48px] bg-white bg-opacity-60 rounded-lg border-2 border-white border-opacity-30 hover:bg-opacity-70",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(react_icons__WEBPACK_IMPORTED_MODULE_1__.IconContext.Provider, {
+              value: {
+                color: "white",
+                size: "30px"
+              },
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(react_icons_ri__WEBPACK_IMPORTED_MODULE_4__.RiMenuFill, {})
+            })
           })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+          className: "flex items-center invisible w-[0px] h-[0px] lg:visible lg:w-fit lg:h-fit",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_NavButton__WEBPACK_IMPORTED_MODULE_2__["default"], {
+              btnText: "HOME",
+              btnStyle: "rounded-l-xl border-l-2 border-y-2"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_NavButton__WEBPACK_IMPORTED_MODULE_2__["default"], {
+              btnText: "CATEGORIES",
+              btnStyle: "border-y-2"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_NavButton__WEBPACK_IMPORTED_MODULE_2__["default"], {
+              btnText: "SHELF",
+              btnStyle: "border-y-2"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_NavButton__WEBPACK_IMPORTED_MODULE_2__["default"], {
+              btnText: "NOTES",
+              btnStyle: "rounded-r-xl border-r-2 border-y-2"
+            })]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+            className: "flex items-center justify-center ml-6 bg-white bg-opacity-60 h-[48px] w-[48px] rounded-xl border-2 border-white border-opacity-30 cursor-pointer hover:bg-opacity-70",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(react_icons__WEBPACK_IMPORTED_MODULE_1__.IconContext.Provider, {
+              value: {
+                color: "rgba(255, 255, 255, 0.8)",
+                size: "30px",
+                style: {
+                  verticalAlign: "middle"
+                }
+              },
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(react_icons_ri__WEBPACK_IMPORTED_MODULE_4__.RiUserFill, {})
+            })
+          })]
         })]
       })]
     })
