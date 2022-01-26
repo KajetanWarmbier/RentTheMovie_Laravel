@@ -50,9 +50,9 @@ class GenreController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($genreId)
     {
-        //
+        $movies = Http::get('https://api.themoviedb.org/3/discover/movie?api_key=' . config('services.tmdb.token') . '&language=en-US&sort_by=' . $genreId);
     }
 
     /**
