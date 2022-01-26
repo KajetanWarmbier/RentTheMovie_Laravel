@@ -4879,6 +4879,58 @@ function Label(_ref) {
 
 /***/ }),
 
+/***/ "./resources/js/Components/MovieCard.js":
+/*!**********************************************!*\
+  !*** ./resources/js/Components/MovieCard.js ***!
+  \**********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react_icons_ri__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-icons/ri */ "./node_modules/react-icons/ri/index.esm.js");
+/* harmony import */ var react_icons__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-icons */ "./node_modules/react-icons/lib/esm/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+
+
+var MovieCard = function MovieCard(props) {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+    className: "h-[366px] w-[230px] rounded-xl border-2 border-white border-opacity-60 bg-white bg-opacity-30",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
+      className: "h-[300px] w-[230px] rounded-t-xl object-cover",
+      src: "https://image.tmdb.org/t/p/w500".concat(props.posterPath),
+      alt: "Movie"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+      className: "grid grid-cols-4 h-[66px] w-[230px] items-center px-1 justify-items-center",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+        className: "col-span-2 font-semibold text-white text-sm text-center",
+        children: props.movieName
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+        className: "flex h-[40px] w-[40px] items-center justify-center",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_icons__WEBPACK_IMPORTED_MODULE_0__.IconContext.Provider, {
+          value: {
+            color: "white",
+            size: "40px"
+          },
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_icons_ri__WEBPACK_IMPORTED_MODULE_2__.RiAddCircleFill, {})
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+        className: "flex h-[40px] w-[40px] rounded-xl border-2 border-white border-opacity-60 bg-white bg-opacity-30 text-center text-white text-2xl items-center justify-center",
+        children: props.rating
+      })]
+    })]
+  });
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (MovieCard);
+
+/***/ }),
+
 /***/ "./resources/js/Components/NavButton.js":
 /*!**********************************************!*\
   !*** ./resources/js/Components/NavButton.js ***!
@@ -6085,7 +6137,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
 /* harmony import */ var _Layouts_Layout__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @/Layouts/Layout */ "./resources/js/Layouts/Layout.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _Components_MovieCard__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @/Components/MovieCard */ "./resources/js/Components/MovieCard.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
 
 
 
@@ -6093,18 +6147,52 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var Home = function Home(props) {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.Fragment, {
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("h1", {
-        className: "text-blue-300 font-bold text-2xl",
-        children: "This is just a test!"
-      })
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+    className: "h-screen overflow-auto pb-[200px] scrollbar-hide",
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+      className: "grid 2xl:grid-cols-5 xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 justify-items-center gap-x-5 gap-y-12",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_Components_MovieCard__WEBPACK_IMPORTED_MODULE_3__["default"], {
+        posterPath: "/jKBjeXM7iBBV9UkUcOXx3m7FSHY.jpg",
+        movieName: "Batman",
+        rating: "80",
+        id: "id"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_Components_MovieCard__WEBPACK_IMPORTED_MODULE_3__["default"], {
+        posterPath: "/jKBjeXM7iBBV9UkUcOXx3m7FSHY.jpg",
+        movieName: "Batman",
+        rating: "80",
+        id: "id"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_Components_MovieCard__WEBPACK_IMPORTED_MODULE_3__["default"], {
+        posterPath: "/jKBjeXM7iBBV9UkUcOXx3m7FSHY.jpg",
+        movieName: "Batman",
+        rating: "80",
+        id: "id"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_Components_MovieCard__WEBPACK_IMPORTED_MODULE_3__["default"], {
+        posterPath: "/jKBjeXM7iBBV9UkUcOXx3m7FSHY.jpg",
+        movieName: "Batman",
+        rating: "80",
+        id: "id"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_Components_MovieCard__WEBPACK_IMPORTED_MODULE_3__["default"], {
+        posterPath: "/jKBjeXM7iBBV9UkUcOXx3m7FSHY.jpg",
+        movieName: "Batman",
+        rating: "80",
+        id: "id"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_Components_MovieCard__WEBPACK_IMPORTED_MODULE_3__["default"], {
+        posterPath: "/jKBjeXM7iBBV9UkUcOXx3m7FSHY.jpg",
+        movieName: "Batman",
+        rating: "80",
+        id: "id"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_Components_MovieCard__WEBPACK_IMPORTED_MODULE_3__["default"], {
+        posterPath: "/jKBjeXM7iBBV9UkUcOXx3m7FSHY.jpg",
+        movieName: "Batman",
+        rating: "80",
+        id: "id"
+      })]
     })
   });
 };
 
 Home.layout = function (page) {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_Layouts_Layout__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_Layouts_Layout__WEBPACK_IMPORTED_MODULE_2__["default"], {
     children: page,
     title: "Home"
   });
