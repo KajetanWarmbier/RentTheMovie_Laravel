@@ -45,9 +45,9 @@ class SearchMovieController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($movieName)
     {
-        $searchMovie = Http::get('https://api.themoviedb.org/3/search/movie?api_key=' . config('services.tmdb.token') . '&language=en-US&query' . $id)
+        $searchMovie = Http::get('https://api.themoviedb.org/3/search/movie?api_key=' . config('services.tmdb.token') . '&language=en-US&query=' . $movieName)
         ->json();
 
         // return Inertia::render('Home', [
