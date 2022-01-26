@@ -3,11 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Tmdb\Laravel\Facades\Tmdb;
+use Illuminate\Support\Facades\Http;
+use Inertia\Inertia;
 
-class GenresController extends Controller
+class PopularMoviesController extends Controller
 {
-
     /**
      * Display a listing of the resource.
      *
@@ -15,7 +15,13 @@ class GenresController extends Controller
      */
     public function index()
     {
-        return Tmdb::getGenresApi()->getGenres();
+        $popularMovies = Http::get('https://api.themoviedb.org/3/movie/popular?api_key=' . config('services.tmdb.token') . '&language=en-US&page=1')
+        ->json()['results'];
+        //dump($popularMovies);
+
+        return Inertia::render('Home', [
+            'popular' => $popularMovies
+        ]);
     }
 
     /**

@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\GenreController;
+use App\Http\Controllers\PopularMovies;
+use App\Http\Controllers\PopularMoviesController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -25,9 +27,7 @@ use Inertia\Inertia;
 //     ]);
 // });
 
-Route::get('/', function() {
-    return Inertia::render('Home');
-});
+Route::get('/', [PopularMoviesController::class, 'index']);
 
 Route::get('/categories',[GenreController::class, 'index']) ->name('categories.index');
 
