@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
+use Inertia\Inertia;
 
 class GenreController extends Controller
 {
@@ -16,7 +17,10 @@ class GenreController extends Controller
     {
         $genres = Http::get('https://api.themoviedb.org/3/genre/movie/list?api_key=' . config('services.tmdb.token') . '&language=en-US')
         ->json();
-        dd($genres);
+        //dd($genres);
+        return Inertia::render('Categories', [
+            'category' => $genres
+        ]);
     }
 
     /**
