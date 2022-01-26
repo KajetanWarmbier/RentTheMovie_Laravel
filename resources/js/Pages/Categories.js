@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link, Head } from "@inertiajs/inertia-react";
 import Layout from "@/Layouts/Layout";
 
 const Categories = (props) => {
+    useEffect((props) => {
+        console.log("categories page.");
+    }, []);
+
     return (
         <>
             <div>
