@@ -1,5 +1,5 @@
 import { Link } from "@inertiajs/inertia-react";
-import { RiMovie2Fill, RiUserFill, RiCloseFill } from "react-icons/ri";
+import { RiMovie2Fill, RiUserFill, RiArrowRightSFill } from "react-icons/ri";
 import { IconContext } from "react-icons";
 import { useState } from "react";
 import NavButton from "./NavButton";
@@ -37,13 +37,14 @@ const Navbar = () => {
                             <input
                                 type="text"
                                 placeholder="Search..."
-                                className="h-[48px] w-[166] rounded-xl lg:rounded-none lg:rounded-l-xl bg-clip-padding backdrop-filter backdrop-blur-xl bg-white bg-opacity-60 border-2 border-white border-opacity-70 lg:w-[242px]"
+                                size="15"
+                                className="h-[48px] w-[166] rounded-l-xl bg-clip-padding backdrop-filter backdrop-blur-xl bg-white bg-opacity-60 border-2 border-white border-opacity-70 lg:w-[242px]"
                                 value={inputValue}
                                 onChange={handleSearchInput}
                             ></input>
                         </div>
                         <button
-                            className="flex items-center justify-center h-0 w-0 invisible lg:visible lg:h-[48px] lg:w-[48px] rounded-r-xl bg-clip-padding backdrop-filter backdrop-blur-xl bg-white bg-opacity-60 border-y-2 border-r-2 border-white border-opacity-70 hover:bg-opacity-80 cursor-pointer"
+                            className="flex items-center justify-center h-[48px] w-[48px] visible lg:h-[48px] lg:w-[48px] rounded-r-xl bg-clip-padding backdrop-filter backdrop-blur-xl bg-white bg-opacity-60 border-y-2 border-r-2 border-white border-opacity-70 hover:bg-opacity-80 cursor-pointer"
                             onClick={resetSearchInput}
                         >
                             <IconContext.Provider
@@ -53,7 +54,7 @@ const Navbar = () => {
                                     style: { verticalAlign: "middle" },
                                 }}
                             >
-                                <RiCloseFill />
+                                <RiArrowRightSFill />
                             </IconContext.Provider>
                         </button>
                     </div>
