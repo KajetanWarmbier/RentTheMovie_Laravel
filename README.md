@@ -15,7 +15,7 @@ In first terminal, do:
 ```
 $ php artisan serve
 ```
-$ In the second, do:
+In the second, do:
 ```
-npm run watch
+$ npm run watch
 ```
