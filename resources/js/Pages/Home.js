@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { Link, Head } from "@inertiajs/inertia-react";
 import Layout from "@/Layouts/Layout";
 import MovieCard from "@/Components/MovieCard";
 

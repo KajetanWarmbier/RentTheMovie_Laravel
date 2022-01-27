@@ -16,7 +16,7 @@ const MovieCard = (props) => {
                 >
                     {props.movieData.title}
                 </div>
-                <div className="flex h-[40px] w-[40px] items-center justify-center">
+                <div className="flex h-[40px] w-[40px] items-center justify-center cursor-pointer">
                     <IconContext.Provider
                         value={{ color: "white", size: "40px" }}
                     >

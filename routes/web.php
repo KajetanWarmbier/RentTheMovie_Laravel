@@ -31,6 +31,22 @@ Route::get('/', [PopularMoviesController::class, 'index']);
 
 Route::get('/categories',[GenreController::class, 'index']) ->name('categories.index');
 
+Route::get("/shelf", function() {
+    return Inertia::render('Shelf');
+});
+
+Route::get("/notes", function() {
+    return Inertia::render('Notes');
+});
+
+Route::get("/signin", function() {
+    return Inertia::render('Signin');
+});
+
+Route::get("/signup", function() {
+    return Inertia::render('Signup');
+});
+
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
