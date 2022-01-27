@@ -3,8 +3,6 @@ import Layout from "@/Layouts/Layout";
 import MovieCard from "@/Components/MovieCard";
 
 const Home = (props) => {
-    console.log(props.popular);
-
     const [pupularMoviesList, setPopularMoviesList] = useState([]);
 
     useEffect(() => {
