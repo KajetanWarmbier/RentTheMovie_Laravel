@@ -2,6 +2,7 @@ import { Link } from "@inertiajs/inertia-react";
 import { RiMovie2Fill, RiUserFill, RiArrowRightSFill } from "react-icons/ri";
 import { IconContext } from "react-icons";
 import { useState } from "react";
+import route from "ziggy-js";
 import NavButton from "./NavButton";
 import DropdownBurger from "./DropdownBurger";
 import DropdownCategories from "./DropdownCategories";
@@ -28,10 +29,14 @@ const Navbar = () => {
         <div className="h-[60px] w-full mt-7">
             <div className="flex items-center justify-between xl:mx-28 mx-5">
                 <div className="flex items-center">
-                    <RiMovie2Fill className="float-left h-[50px] w-[50px] text-white opacity-80" />
-                    <h1 className="font-semibold text-[46px] text-white opacity-80 lg:visible invisible lg:w-fit lg:h-fit w-[0px] h-[0px]">
-                        RTM
-                    </h1>
+                    <Link href="/">
+                        <RiMovie2Fill className="float-left h-[50px] w-[50px] text-white opacity-80" />
+                    </Link>
+                    <Link href="/">
+                        <h1 className="font-semibold text-[46px] text-white opacity-80 lg:visible invisible lg:w-fit lg:h-fit w-[0px] h-[0px]">
+                            RTM
+                        </h1>
+                    </Link>
                     <div className="flex mx-2 lg:mx-8">
                         <div>
                             <input
@@ -43,20 +48,24 @@ const Navbar = () => {
                                 onChange={handleSearchInput}
                             ></input>
                         </div>
-                        <button
-                            className="flex items-center justify-center h-[48px] w-[48px] visible lg:h-[48px] lg:w-[48px] rounded-r-xl bg-clip-padding backdrop-filter backdrop-blur-xl bg-white bg-opacity-60 border-y-2 border-r-2 border-white border-opacity-70 hover:bg-opacity-80 cursor-pointer"
-                            onClick={resetSearchInput}
+                        <Link
+                            href={route("home.show", { movieName: inputValue })}
                         >
-                            <IconContext.Provider
-                                value={{
-                                    color: "rgba(255, 255, 255, 0.8)",
-                                    size: "35px",
-                                    style: { verticalAlign: "middle" },
-                                }}
+                            <button
+                                className="flex items-center justify-center h-[48px] w-[48px] visible lg:h-[48px] lg:w-[48px] rounded-r-xl bg-clip-padding backdrop-filter backdrop-blur-xl bg-white bg-opacity-60 border-y-2 border-r-2 border-white border-opacity-70 hover:bg-opacity-80 cursor-pointer"
+                                onClick={resetSearchInput}
                             >
-                                <RiArrowRightSFill />
-                            </IconContext.Provider>
-                        </button>
+                                <IconContext.Provider
+                                    value={{
+                                        color: "rgba(255, 255, 255, 0.8)",
+                                        size: "35px",
+                                        style: { verticalAlign: "middle" },
+                                    }}
+                                >
+                                    <RiArrowRightSFill />
+                                </IconContext.Provider>
+                            </button>
+                        </Link>
                     </div>
                 </div>
 
