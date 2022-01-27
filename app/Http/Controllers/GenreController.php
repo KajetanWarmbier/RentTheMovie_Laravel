@@ -50,9 +50,14 @@ class GenreController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($genreId)
+    public function show(int $id)
     {
-        $movies = Http::get('https://api.themoviedb.org/3/discover/movie?api_key=' . config('services.tmdb.token') . '&language=en-US&sort_by=' . $genreId);
+        $genreId = $id;
+        $movies = Http::get('https://api.themoviedb.org/3/discover/movie?api_key=' . config('services.tmdb.token') . '&language=en-US&sort_by=popularity.desc&with_genres=' . $genreId)->json();
+
+        return Inertia::render('Categories', [
+            'movies' => $movies
+        ]);
     }
 
     /**

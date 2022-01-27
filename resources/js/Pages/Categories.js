@@ -5,8 +5,9 @@ import Layout from "@/Layouts/Layout";
 const Categories = (props) => {
     useEffect((props) => {
         console.log("categories page.");
+        console.log(props.movies);
     }, []);
-
+    
     return (
         <>
             <div>
