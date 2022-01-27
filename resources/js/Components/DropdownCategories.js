@@ -3,15 +3,25 @@ import { Link } from "@inertiajs/inertia-react";
 
 const DropdownCategories = () => {
     const genresList = [
-        "HORROR",
-        "ACTION",
-        "ROMANCE",
-        "THRILLER",
-        "ANIMATION",
-        "ADVENTURE",
-        "COMEDY",
-        "CRIME",
-        "DOCUMENTARY",
+        { id: 28, name: "Action" },
+        { id: 12, name: "Adventure" },
+        { id: 16, name: "Animation" },
+        { id: 35, name: "Comedy" },
+        { id: 80, name: "Crime" },
+        { id: 99, name: "Documentary" },
+        { id: 18, name: "Drama" },
+        { id: 10751, name: "Family" },
+        { id: 14, name: "Fantasy" },
+        { id: 36, name: "History" },
+        { id: 27, name: "Horror" },
+        { id: 10402, name: "Music" },
+        { id: 9648, name: "Mystery" },
+        { id: 10749, name: "Romance" },
+        { id: 878, name: "Science Fiction" },
+        { id: 10770, name: "TV Movie" },
+        { id: 53, name: "Thriller" },
+        { id: 10752, name: "War" },
+        { id: 37, name: "Western" },
     ];
 
     return (
@@ -25,9 +35,11 @@ const DropdownCategories = () => {
                         {genresList.map((genre) => {
                             return (
                                 <Menu.Item>
-                                    <div className="group flex items-center px-4 py-3 m-1 text-xl font-semibold border-1 border-white border-opacity-30  text-white backdrop-filter-none backdrop-blur-none rounded-xl hover:bg-opacity-10 hover:bg-black">
-                                        {genre}
-                                    </div>
+                                    <Link href={`/categories/${genre.id}`}>
+                                        <div className="group flex items-center px-4 py-3 m-1 text-xl font-semibold border-1 border-white border-opacity-30  text-white backdrop-filter-none backdrop-blur-none rounded-xl hover:bg-opacity-10 hover:bg-black">
+                                            {genre.name}
+                                        </div>
+                                    </Link>
                                 </Menu.Item>
                             );
                         })}

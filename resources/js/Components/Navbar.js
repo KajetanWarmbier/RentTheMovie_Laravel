@@ -8,6 +8,13 @@ import DropdownCategories from "./DropdownCategories";
 
 const Navbar = () => {
     const [inputValue, setInputValue] = useState("");
+    const [profileDestinations, setProfileDestinations] = useState("/signin");
+
+    // useEffect(() => {
+    //     if (ZALOGOWANY) {
+    //         setProfileDestinations("/profile");
+    //     }
+    // });
 
     const handleSearchInput = (event) => {
         setInputValue(event.target.value);
@@ -80,17 +87,19 @@ const Navbar = () => {
                                 />
                             </Link>
                         </div>
-                        <div className="flex items-center justify-center ml-6 bg-white bg-opacity-60 h-[48px] w-[48px] rounded-xl border-2 border-white border-opacity-30 cursor-pointer hover:bg-opacity-70">
-                            <IconContext.Provider
-                                value={{
-                                    color: "rgba(255, 255, 255, 0.8)",
-                                    size: "30px",
-                                    style: { verticalAlign: "middle" },
-                                }}
-                            >
-                                <RiUserFill />
-                            </IconContext.Provider>
-                        </div>
+                        <Link href={profileDestinations}>
+                            <div className="flex items-center justify-center ml-6 bg-white bg-opacity-60 h-[48px] w-[48px] rounded-xl border-2 border-white border-opacity-30 cursor-pointer hover:bg-opacity-70">
+                                <IconContext.Provider
+                                    value={{
+                                        color: "rgba(255, 255, 255, 0.8)",
+                                        size: "30px",
+                                        style: { verticalAlign: "middle" },
+                                    }}
+                                >
+                                    <RiUserFill />
+                                </IconContext.Provider>
+                            </div>
+                        </Link>
                     </div>
                 </div>
             </div>

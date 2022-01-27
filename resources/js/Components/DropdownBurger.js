@@ -3,7 +3,6 @@ import { RiMenuFill } from "react-icons/ri";
 import { IconContext } from "react-icons";
 import { Menu } from "@headlessui/react";
 import { useState, useEffect } from "react";
-import CategoriesModalMobile from "./CategoriesModalMobile";
 
 const DropdownBurger = () => {
     const [profileDestinations, setProfileDestinations] = useState("/signin");
@@ -35,7 +34,11 @@ const DropdownBurger = () => {
                             </Link>
                         </Menu.Item>
                         <Menu.Item>
-                            <CategoriesModalMobile />
+                            <Link href="/shelf">
+                                <div className="group flex items-center px-4 py-3 text-xl font-semibold border-b-2 border-white border-opacity-30  text-white backdrop-filter-none backdrop-blur-none">
+                                    CATEGORIES
+                                </div>
+                            </Link>
                         </Menu.Item>
                         <Menu.Item>
                             <Link href="/shelf">
