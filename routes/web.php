@@ -30,9 +30,8 @@ use Inertia\Inertia;
 
 Route::get('/', [PopularMoviesController::class, 'index']);
 
-Route::get('/{movieName}', [SearchMovieController::class, 'show'])->name('home.show');
+Route::get('/search/{movieName}', [SearchMovieController::class, 'show'])->name('home.show');
 
-//Route::get('/categories',[GenreController::class, 'index']) ->name('categories.index');
 Route::get('/categories/{id}', [GenreController::class, 'show'])->name('categories.show');
 
 Route::get("/categoriesmobile", function() {
