@@ -47,13 +47,13 @@ const DropdownBurger = () => {
                                 </div>
                             </Link>
                         </Menu.Item>
-                        <Menu.Item>
+                        {/* <Menu.Item>
                             <Link href="/notes">
                                 <div className="group flex items-center px-4 py-3 text-xl font-semibold border-b-2 border-white border-opacity-30  text-white backdrop-filter-none backdrop-blur-none">
                                     NOTES
                                 </div>
                             </Link>
-                        </Menu.Item>
+                        </Menu.Item> */}
                         <Menu.Item>
                             <Link href={profileDestinations}>
                                 <div className="group flex items-center px-4 py-3 text-xl font-semibold text-white">
