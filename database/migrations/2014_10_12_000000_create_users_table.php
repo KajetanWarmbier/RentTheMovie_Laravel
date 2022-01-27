@@ -33,4 +33,8 @@ class CreateUsersTable extends Migration
     {
         Schema::dropIfExists('users');
     }
+
+    public function movies() {
+        return $this->hasMany('App\Models\Shelf');
+    }
 }
