@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Layout from "@/Layouts/Layout";
 import { RiMovie2Fill } from "react-icons/ri";
 import { useForm } from "@inertiajs/inertia-react";
-import route from "ziggy-js";
 
 const Signup = () => {
     const { data, setData, post, processing, errors } = useForm({
@@ -13,9 +12,8 @@ const Signup = () => {
 
     function submit(e) {
         e.preventDefault();
-        if (password === password_confirmation) {
-            post(route("user.create"));
-        }
+        post(route("register"));
+        
     }
 
     return (

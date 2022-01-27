@@ -54,6 +54,8 @@ Route::get("/signup", function() {
     return Inertia::render('Signup');
 });
 
+Route::post('/signup', [App\Http\Controllers\Auth\RegisteredUserController::class, 'store'])->name('register');
+
 Route::get("/profile", function() {
     return Inertia::render('Profile');
 });
