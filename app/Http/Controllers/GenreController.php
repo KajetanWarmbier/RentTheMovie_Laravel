@@ -15,12 +15,12 @@ class GenreController extends Controller
      */
     public function index()
     {
-        $genres = Http::get('https://api.themoviedb.org/3/genre/movie/list?api_key=' . config('services.tmdb.token') . '&language=en-US')
-        ->json();
-        //dd($genres);
-        return Inertia::render('Categories', [
-            'category' => $genres
-        ]);
+        // $genres = Http::get('https://api.themoviedb.org/3/genre/movie/list?api_key=' . config('services.tmdb.token') . '&language=en-US')
+        // ->json();
+        // //dd($genres);
+        // return Inertia::render('Categories', [
+        //     'category' => $genres
+        // ]);
     }
 
     /**
@@ -50,13 +50,12 @@ class GenreController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(int $id)
-    {
-        $genreId = $id;
-        $movies = Http::get('https://api.themoviedb.org/3/discover/movie?api_key=' . config('services.tmdb.token') . '&language=en-US&sort_by=popularity.desc&with_genres=' . $genreId)->json();
-
+    public function show($id)
+    {   //$request->route('id');
+        $movies = Http::get('https://api.themoviedb.org/3/discover/movie?api_key=' . config('services.tmdb.token') . '&language=en-US&sort_by=popularity.desc&with_genres=' . $id)->json()['results'];
+        //dd($movies);
         return Inertia::render('Categories', [
-            'movies' => $movies
+            'genre' => $movies
         ]);
     }
 
