@@ -32,6 +32,7 @@
         "@tailwindcss/line-clamp": "^0.3.1",
         "react-helmet": "^6.1.0",
         "react-icons": "^4.3.1",
-        "tailwind-scrollbar-hide": "^1.1.7"
+        "tailwind-scrollbar-hide": "^1.1.7",
+        "ziggy-js": "^1.4.2"
     }
 }

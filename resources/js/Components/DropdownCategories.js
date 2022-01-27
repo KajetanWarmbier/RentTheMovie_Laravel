@@ -1,5 +1,8 @@
 import { Menu } from "@headlessui/react";
 import { Link } from "@inertiajs/inertia-react";
+//import route from "vendor/tightenco/ziggy/src/js";
+import route from 'ziggy-js';
+//import Ziggy from './Ziggy';
 
 const DropdownCategories = () => {
     const genresList = [
@@ -35,7 +38,7 @@ const DropdownCategories = () => {
                         {genresList.map((genre) => {
                             return (
                                 <Menu.Item>
-                                    <Link href={`/categories/${genre.id}`}>
+                                    <Link href={route('categories.show', {id: genre.id})}>
                                         <div className="group flex items-center px-4 py-3 m-1 text-xl font-semibold border-1 border-white border-opacity-30  text-white backdrop-filter-none backdrop-blur-none rounded-xl hover:bg-opacity-10 hover:bg-black">
                                             {genre.name}
                                         </div>
