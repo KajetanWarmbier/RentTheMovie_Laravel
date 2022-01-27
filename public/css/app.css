@@ -720,11 +720,11 @@ select {
 .mt-5 {
   margin-top: 1.25rem;
 }
-.mt-1 {
-  margin-top: 0.25rem;
-}
 .mb-2 {
   margin-bottom: 0.5rem;
+}
+.mt-1 {
+  margin-top: 0.25rem;
 }
 .block {
   display: block;
