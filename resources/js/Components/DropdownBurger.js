@@ -1,3 +1,4 @@
+import { Link } from "@inertiajs/inertia-react";
 import { RiMenuFill } from "react-icons/ri";
 import { IconContext } from "react-icons";
 import { Menu } from "@headlessui/react";
@@ -17,24 +18,32 @@ const DropdownBurger = () => {
                 <Menu.Items className="origin-top-right absolute right-0 mt-4 mr-5 px-2 w-fit shadow-lg bg-white bg-opacity-60 rounded-xl border-2 border-white border-opacity-30 bg-clip-padding backdrop-filter backdrop-blur-xl">
                     <div className="py-1">
                         <Menu.Item>
-                            <div className="groip flex items-center px-4 py-3 text-xl font-semibold border-b-2 border-white border-opacity-30  text-white backdrop-filter-none backdrop-blur-none">
-                                HOME
-                            </div>
+                            <Link href="/">
+                                <div className="groip flex items-center px-4 py-3 text-xl font-semibold border-b-2 border-white border-opacity-30  text-white backdrop-filter-none backdrop-blur-none">
+                                    HOME
+                                </div>
+                            </Link>
                         </Menu.Item>
                         <Menu.Item>
-                            <div className="groip flex items-center px-4 py-3 text-xl font-semibold border-b-2 border-white border-opacity-30  text-white backdrop-filter-none backdrop-blur-none">
-                                CATEGORIES
-                            </div>
+                            <Link href="/categories">
+                                <div className="groip flex items-center px-4 py-3 text-xl font-semibold border-b-2 border-white border-opacity-30  text-white backdrop-filter-none backdrop-blur-none">
+                                    CATEGORIES
+                                </div>
+                            </Link>
                         </Menu.Item>
                         <Menu.Item>
-                            <div className="groip flex items-center px-4 py-3 text-xl font-semibold border-b-2 border-white border-opacity-30  text-white backdrop-filter-none backdrop-blur-none">
-                                SHELF
-                            </div>
+                            <Link href="/shelf">
+                                <div className="groip flex items-center px-4 py-3 text-xl font-semibold border-b-2 border-white border-opacity-30  text-white backdrop-filter-none backdrop-blur-none">
+                                    SHELF
+                                </div>
+                            </Link>
                         </Menu.Item>
                         <Menu.Item>
-                            <div className="groip flex items-center px-4 py-3 text-xl font-semibold border-b-2 border-white border-opacity-30  text-white backdrop-filter-none backdrop-blur-none">
-                                NOTES
-                            </div>
+                            <Link href="/notes">
+                                <div className="groip flex items-center px-4 py-3 text-xl font-semibold border-b-2 border-white border-opacity-30  text-white backdrop-filter-none backdrop-blur-none">
+                                    NOTES
+                                </div>
+                            </Link>
                         </Menu.Item>
                         <Menu.Item>
                             <div className="groip flex items-center px-4 py-3 text-xl font-semibold text-white">
