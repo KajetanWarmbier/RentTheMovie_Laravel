@@ -87,15 +87,15 @@ const Navbar = () => {
                             <Link href="/shelf">
                                 <NavButton
                                     btnText="SHELF"
-                                    btnStyle="border-y-2"
+                                    btnStyle="border-y-2 border-r-2 rounded-r-xl"
                                 />
                             </Link>
-                            <Link href="/notes">
+                            {/* <Link href="/notes">
                                 <NavButton
                                     btnText="NOTES"
                                     btnStyle="rounded-r-xl border-r-2 border-y-2"
                                 />
-                            </Link>
+                            </Link> */}
                         </div>
                         <Link href={profileDestinations}>
                             <div className="flex items-center justify-center ml-6 bg-white bg-opacity-60 h-[48px] w-[48px] rounded-xl border-2 border-white border-opacity-30 cursor-pointer hover:bg-opacity-70">
