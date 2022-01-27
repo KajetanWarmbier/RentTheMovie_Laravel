@@ -29,7 +29,12 @@ use Inertia\Inertia;
 
 Route::get('/', [PopularMoviesController::class, 'index']);
 
-Route::get('/categories',[GenreController::class, 'index']) ->name('categories.index');
+//Route::get('/categories',[GenreController::class, 'index']) ->name('categories.index');
+Route::get('/categories/{id}', [GenreController::class, 'show'])->name('categories.show');
+
+Route::get("/categoriesmobile", function() {
+    return Inertia::render('CategoriesMobile');
+});
 
 Route::get("/shelf", function() {
     return Inertia::render('Shelf');
