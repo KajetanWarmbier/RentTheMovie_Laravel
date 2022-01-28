@@ -19,6 +19,7 @@ const Signup = () => {
         e.preventDefault();
 
         post(route("register"));
+        
     }
 
     return (
