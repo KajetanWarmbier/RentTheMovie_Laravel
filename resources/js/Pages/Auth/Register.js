@@ -8,10 +8,8 @@ import { Head, Link, useForm } from "@inertiajs/inertia-react";
 
 export default function Register() {
     const { data, setData, post, processing, errors, reset } = useForm({
-        name: "",
         email: "",
         password: "",
-        password_confirmation: "",
     });
 
     useEffect(() => {
@@ -94,9 +92,7 @@ export default function Register() {
                     <Input
                         type="password"
                         name="password_confirmation"
-                        value={data.password_confirmation}
                         className="mt-1 block w-full"
-                        handleChange={onHandleChange}
                         required
                     />
                 </div>

@@ -1,21 +1,24 @@
-import React, { useState } from "react";
+import React, { useEffect } from "react";
 import Layout from "@/Layouts/Layout";
 import { RiMovie2Fill } from "react-icons/ri";
 import { useForm } from "@inertiajs/inertia-react";
-import route from "ziggy-js";
 
 const Signup = () => {
     const { data, setData, post, processing, errors } = useForm({
         email: "",
         password: "",
-        password_confirmation: "",
     });
+
+    // useEffect(() => {
+    //     return () => {
+    //         reset("password", "password_confirmation");
+    //     };
+    // });
 
     function submit(e) {
         e.preventDefault();
-        if (password === password_confirmation) {
-            post(route("user.create"));
-        }
+
+        post(route("register"));
     }
 
     return (
@@ -35,6 +38,7 @@ const Signup = () => {
                             <input
                                 type="text"
                                 name="email"
+                                autoComplete="email"
                                 value={data.email}
                                 placeholder="E-mail"
                                 onChange={(e) =>
@@ -48,6 +52,7 @@ const Signup = () => {
                                 type="password"
                                 name="password"
                                 value={data.password}
+                                autoComplete="new-password"
                                 placeholder="Password"
                                 onChange={(e) =>
                                     setData("password", e.target.value)
@@ -55,21 +60,15 @@ const Signup = () => {
                                 className="w-[200px] h-[40px] lg:w-[300px] lg:h-[55px] my-2 placeholder-slate-400 bg-white bg-opacity-60 rounded-xl border-2 border-white border-opacity-30"
                             ></input>
                         </div>
-                        <div>
+                        {/* <div>
                             <input
                                 type="password"
                                 name="password_confirmation"
-                                value={data.password_confirmation}
+                                autoComplete="new-password"
                                 placeholder="Confirm Password"
-                                onChange={(e) =>
-                                    setData(
-                                        "password_confirmation",
-                                        e.target.value
-                                    )
-                                }
                                 className="w-[200px] h-[40px] lg:w-[300px] lg:h-[55px] mb-2 placeholder-slate-400 bg-white bg-opacity-60 rounded-xl border-2 border-white border-opacity-30"
                             ></input>
-                        </div>
+                        </div> */}
                         <button
                             type="submit"
                             disabled={processing}
