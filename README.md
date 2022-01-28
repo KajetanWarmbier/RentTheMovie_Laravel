@@ -3,7 +3,6 @@ Our team's project is a movie rental company
 You can easily rent movies at any time. You also have the option to mark them as "watched" , "to watch", or "unseen". A grading system is also available.
 
 ## How to start:
-***
 Download the repository to your computer.   
 Open it in Visual Studio Code.   
 ```
@@ -19,3 +18,6 @@ In the second, do:
 ```
 $ npm run watch
 ```
+
+## Quick look
+![alt text](https://github.com/KajetanWarmbier/RentTheMovie_Laravel/blob/master/main.png "Strona-glowna")
